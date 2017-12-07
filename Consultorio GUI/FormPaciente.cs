@@ -18,6 +18,8 @@ namespace Consultorio_GUI
         List<Paciente> uno;
         List<Cita> dos;
         List<Horario> horarios;
+        List<Receta> rese;
+        List<MedicamentoReceta> medica;
 
         public int CuentaActual { get; set; }
         //de por mientras
@@ -33,10 +35,13 @@ namespace Consultorio_GUI
 
             actualizarDatos();
 
-           uno = client.readPaciente().Where(y=>y.ID_Cuenta==CuentaActual).ToList();
+            uno = client.readPaciente().Where(y => y.ID_Cuenta == CuentaActual).ToList(); 
+
+            rese = client.readReceta().Where(y => y.ID_Paciente == uno[0].ID).ToList();
+            cbRecetas_Receta.DataSource = rese;
+            cbRecetas_Receta.DisplayMember = "ID";
 
             horarios = client.readHorario().ToList();
-            
             listNuevaCita_Hora.DisplayMember = "hora";
         }
 
@@ -55,13 +60,13 @@ namespace Consultorio_GUI
                     select u;
             
             dgvVerCita.DataSource = d.ToList();
+
             //Actualizar aquí todo lo automático
             //Mostrar información del paciente
         }
 
         private void btnInfoPaciente_Guardar_Click(object sender, EventArgs e)
         {
-            WebService.WebService1SoapClient x = new WebService1SoapClient();
 
             string tel = txtInfoPaciente_Telefono.Text;
             string dire = txtInfoPaciente_Direccion.Text;
@@ -104,10 +109,9 @@ namespace Consultorio_GUI
 
         private void cbRecetas_Receta_SelectedIndexChanged(object sender, EventArgs e)
         {
-            WebService.WebService1SoapClient x = new WebService1SoapClient();
-
             Receta selec = cbRecetas_Receta.SelectedItem as Receta;
-            dgvRecetas_Medicamentos.DataSource = x.readMedicamentoReceta();
+            medica = client.readMedicamentoReceta().Where(y => y.ID_Receta == selec.ID).ToList();
+            dgvRecetas_Medicamentos.DataSource = medica;
         }
 
         private void calendarNuevaCita_DateChanged(object sender, DateRangeEventArgs e)
