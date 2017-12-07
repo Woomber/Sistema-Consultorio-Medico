@@ -480,6 +480,7 @@
             this.cbExp_Paciente.Name = "cbExp_Paciente";
             this.cbExp_Paciente.Size = new System.Drawing.Size(227, 21);
             this.cbExp_Paciente.TabIndex = 11;
+            this.cbExp_Paciente.SelectedIndexChanged += new System.EventHandler(this.cbExp_Paciente_SelectedIndexChanged);
             // 
             // tabReadPaciente
             // 
@@ -649,6 +650,7 @@
             this.cbInfoPaciente_Medico.Name = "cbInfoPaciente_Medico";
             this.cbInfoPaciente_Medico.Size = new System.Drawing.Size(307, 21);
             this.cbInfoPaciente_Medico.TabIndex = 35;
+            this.cbInfoPaciente_Medico.SelectedIndexChanged += new System.EventHandler(this.cbInfoPaciente_Medico_SelectedIndexChanged);
             // 
             // lblInfoPaciente_Seleccionar
             // 
@@ -718,6 +720,7 @@
             this.btnAdministrarCita_Eliminar.TabIndex = 11;
             this.btnAdministrarCita_Eliminar.Text = "Eliminar cita";
             this.btnAdministrarCita_Eliminar.UseVisualStyleBackColor = true;
+            this.btnAdministrarCita_Eliminar.Click += new System.EventHandler(this.btnAdministrarCita_Eliminar_Click);
             // 
             // lblAdministrarCita_Cita
             // 
@@ -752,6 +755,7 @@
             this.cbAdministrarCita_Paciente.Name = "cbAdministrarCita_Paciente";
             this.cbAdministrarCita_Paciente.Size = new System.Drawing.Size(227, 21);
             this.cbAdministrarCita_Paciente.TabIndex = 7;
+            this.cbAdministrarCita_Paciente.SelectedIndexChanged += new System.EventHandler(this.cbAdministrarCita_Paciente_SelectedIndexChanged);
             // 
             // tabCreateCita
             // 
@@ -813,6 +817,7 @@
             this.btnNuevaCita_Agendar.TabIndex = 4;
             this.btnNuevaCita_Agendar.Text = "Agendar cita";
             this.btnNuevaCita_Agendar.UseVisualStyleBackColor = true;
+            this.btnNuevaCita_Agendar.Click += new System.EventHandler(this.btnNuevaCita_Agendar_Click);
             // 
             // cbNuevaCita_Paciente
             // 
@@ -835,6 +840,7 @@
             this.calendarNuevaCita.Location = new System.Drawing.Point(446, 64);
             this.calendarNuevaCita.Name = "calendarNuevaCita";
             this.calendarNuevaCita.TabIndex = 0;
+            this.calendarNuevaCita.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calendarNuevaCita_DateChanged);
             // 
             // tabReadCitas
             // 
@@ -849,6 +855,7 @@
             // 
             // dgvVerCita
             // 
+            this.dgvVerCita.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVerCita.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVerCita.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvVerCita.Location = new System.Drawing.Point(3, 3);
@@ -871,6 +878,7 @@
             this.tcMain.SelectedIndex = 0;
             this.tcMain.Size = new System.Drawing.Size(714, 324);
             this.tcMain.TabIndex = 1;
+            this.tcMain.Click += new System.EventHandler(this.tcMain_Click);
             // 
             // tabCreateReceta
             // 
@@ -1004,6 +1012,7 @@
             this.cbNuevaReceta_Paciente.Name = "cbNuevaReceta_Paciente";
             this.cbNuevaReceta_Paciente.Size = new System.Drawing.Size(249, 21);
             this.cbNuevaReceta_Paciente.TabIndex = 15;
+            this.cbNuevaReceta_Paciente.SelectedIndexChanged += new System.EventHandler(this.cbNuevaReceta_Paciente_SelectedIndexChanged);
             // 
             // FormMedico
             // 
@@ -1016,6 +1025,7 @@
             this.MinimizeBox = false;
             this.Name = "FormMedico";
             this.Text = "Bienvenido, Médico";
+            this.Load += new System.EventHandler(this.FormMedico_Load);
             this.tabExploracion.ResumeLayout(false);
             this.tabExploracion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudExp_PreDias)).EndInit();

@@ -72,11 +72,7 @@ namespace Consultorio_GUI
             }
             else
             {
-                List<Interrogatorio> final = client.readInterrogatorio().ToList();
-                int max;
-                if (final.Count() != 0) max = client.readInterrogatorio().ToList().Last().ID + 1;
-                else max = 1;
-                client.createInterrogatorio(max, cbAlimentacion.SelectedItem.ToString(), checkDeporte.Checked, checkDrogas.Checked, checkToma.Checked,
+                client.createInterrogatorio(cbAlimentacion.SelectedItem.ToString(), checkDeporte.Checked, checkDrogas.Checked, checkToma.Checked,
                     checkFuma.Checked, CheckMental.Checked, checkCorazon.Checked, checkCancer.Checked, checkDiabetes.Checked, checkCerVas.Checked, PacienteActual);
             }
             /*

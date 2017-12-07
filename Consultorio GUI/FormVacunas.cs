@@ -85,11 +85,7 @@ namespace Consultorio_GUI
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            var x = client.readVacunaPaciente().ToList();
-            int tamaño;
-            if (x.Count() != 0) tamaño = x.Last().ID + 1;
-            else tamaño = 1;
-            client.createVacunaPaciente(tamaño, PacienteActual, IDs[cbAgregar.SelectedIndex]);
+            client.createVacunaPaciente(PacienteActual, IDs[cbAgregar.SelectedIndex]);
             load();
             load_combo();
         }
