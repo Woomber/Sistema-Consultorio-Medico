@@ -85,7 +85,11 @@ namespace Consultorio_GUI
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            client.createVacunaPaciente(PacienteActual, IDs[cbAgregar.SelectedIndex]);
+            int comprobacion = client.createVacunaPaciente(PacienteActual, IDs[cbAgregar.SelectedIndex]);
+            if (comprobacion == -1)
+            {
+                MessageBox.Show("Error");
+            }
             load();
             load_combo();
         }
