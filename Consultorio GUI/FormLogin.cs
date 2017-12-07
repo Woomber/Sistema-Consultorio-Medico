@@ -30,13 +30,18 @@ namespace Consultorio_GUI
         {
             //Checar usuario y contraseña
             Cuenta actual = client.readCuenta(txtUsername.Text, txtPassword.Text);
-            if (actual == null) MessageBox.Show("Login inválido");
+            if (actual == null)
+            {
+                MessageBox.Show("Login inválido");
+                return;
+            }
+
             
             //Cambiar por la lectura del tipo de usuario
             //TipoCuenta = 1;
 
             //Cambiar por la lectura del id de cuenta actual
-            //CuentaActual = 1;
+            CuentaActual = actual.ID;
 
             switch (actual.ID_TipoCuenta)
             {

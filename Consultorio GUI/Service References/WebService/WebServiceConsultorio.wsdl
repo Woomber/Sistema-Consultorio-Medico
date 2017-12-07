@@ -5,7 +5,6 @@
       <s:element name="createCita">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="fecha" type="s:dateTime" />
             <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="status" type="s:boolean" />
@@ -18,7 +17,7 @@
       <s:element name="createCitaResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="createCitaResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="createCitaResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -312,7 +311,6 @@
       <s:element name="createCuenta">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="tipo" type="s:int" />
@@ -322,7 +320,7 @@
       <s:element name="createCuentaResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="createCuentaResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="createCuentaResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -375,7 +373,6 @@
       <s:element name="createExpFisica">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="estudios" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="evolucion" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="temperatura" type="s:double" />
@@ -396,7 +393,7 @@
       <s:element name="createExpFisicaResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="createExpFisicaResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="createExpFisicaResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -455,7 +452,6 @@
       <s:element name="createHorario">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="ID_Medico" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="dia" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="hora" type="s:int" />
@@ -465,7 +461,7 @@
       <s:element name="createHorarioResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="createHorarioResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="createHorarioResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -513,7 +509,6 @@
       <s:element name="createInterrogatorio">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="alimentacion" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="deporte" type="s:boolean" />
             <s:element minOccurs="1" maxOccurs="1" name="drogas" type="s:boolean" />
@@ -531,7 +526,7 @@
       <s:element name="createInterrogatorioResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="createInterrogatorioResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="createInterrogatorioResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -587,7 +582,6 @@
       <s:element name="createMedicamentoReceta">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="medicamento" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="dosis" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="horario" type="s:string" />
@@ -598,7 +592,7 @@
       <s:element name="createMedicamentoRecetaResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="createMedicamentoRecetaResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="createMedicamentoRecetaResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -647,7 +641,6 @@
       <s:element name="createMedico">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="idCuenta" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="apellidoMaterno" type="s:string" />
@@ -662,7 +655,7 @@
       <s:element name="createMedicoResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="createMedicoResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="createMedicoResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -715,7 +708,6 @@
       <s:element name="createMedicoSecretario">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="idMedico" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="idSecretario" type="s:int" />
           </s:sequence>
@@ -724,7 +716,7 @@
       <s:element name="createMedicoSecretarioResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="createMedicoSecretarioResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="createMedicoSecretarioResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -771,7 +763,6 @@
       <s:element name="createPaciente">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="idCuenta" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="apellidoMaterno" type="s:string" />
@@ -788,7 +779,7 @@
       <s:element name="createPacienteResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="createPacienteResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="createPacienteResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -843,7 +834,6 @@
       <s:element name="createReceta">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="idMedico" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="idPaciente" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="status" type="s:boolean" />
@@ -854,7 +844,7 @@
       <s:element name="createRecetaResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="createRecetaResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="createRecetaResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -903,7 +893,6 @@
       <s:element name="createSecretario">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="idCuenta" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="apellidoMaterno" type="s:string" />
@@ -917,7 +906,7 @@
       <s:element name="createSecretarioResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="createSecretarioResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="createSecretarioResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -969,7 +958,6 @@
       <s:element name="createTipoCuenta">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
           </s:sequence>
         </s:complexType>
@@ -977,7 +965,7 @@
       <s:element name="createTipoCuentaResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="createTipoCuentaResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="createTipoCuentaResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -1028,7 +1016,6 @@
       <s:element name="createVacuna">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
           </s:sequence>
         </s:complexType>
@@ -1036,7 +1023,7 @@
       <s:element name="createVacunaResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="createVacunaResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="createVacunaResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -1087,7 +1074,6 @@
       <s:element name="createVacunaPaciente">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="idPaciente" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="idVacuna" type="s:int" />
           </s:sequence>
@@ -1096,7 +1082,7 @@
       <s:element name="createVacunaPacienteResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="createVacunaPacienteResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="createVacunaPacienteResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
