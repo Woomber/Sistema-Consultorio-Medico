@@ -39,9 +39,6 @@
             this.txtNuevaCita_Motivo = new System.Windows.Forms.TextBox();
             this.calendarNuevaCita = new System.Windows.Forms.MonthCalendar();
             this.tabReadPaciente = new System.Windows.Forms.TabPage();
-            this.btnInfoPaciente_Confirmar = new System.Windows.Forms.Button();
-            this.txtInfoPaciente_Password = new System.Windows.Forms.TextBox();
-            this.lblInfo_NuevaPassword = new System.Windows.Forms.Label();
             this.btnInfoPaciente_Guardar = new System.Windows.Forms.Button();
             this.btnInfoPaciente_Vacuna = new System.Windows.Forms.Button();
             this.btnInfoPaciente_Historial = new System.Windows.Forms.Button();
@@ -158,6 +155,7 @@
             this.btnNuevaCita_Agendar.TabIndex = 4;
             this.btnNuevaCita_Agendar.Text = "Agendar cita";
             this.btnNuevaCita_Agendar.UseVisualStyleBackColor = true;
+            this.btnNuevaCita_Agendar.Click += new System.EventHandler(this.btnNuevaCita_Agendar_Click);
             // 
             // txtNuevaCita_Motivo
             // 
@@ -172,12 +170,10 @@
             this.calendarNuevaCita.Location = new System.Drawing.Point(446, 64);
             this.calendarNuevaCita.Name = "calendarNuevaCita";
             this.calendarNuevaCita.TabIndex = 0;
+            this.calendarNuevaCita.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calendarNuevaCita_DateChanged);
             // 
             // tabReadPaciente
             // 
-            this.tabReadPaciente.Controls.Add(this.btnInfoPaciente_Confirmar);
-            this.tabReadPaciente.Controls.Add(this.txtInfoPaciente_Password);
-            this.tabReadPaciente.Controls.Add(this.lblInfo_NuevaPassword);
             this.tabReadPaciente.Controls.Add(this.btnInfoPaciente_Guardar);
             this.tabReadPaciente.Controls.Add(this.btnInfoPaciente_Vacuna);
             this.tabReadPaciente.Controls.Add(this.btnInfoPaciente_Historial);
@@ -203,32 +199,6 @@
             this.tabReadPaciente.TabIndex = 4;
             this.tabReadPaciente.Text = "Mi Información";
             this.tabReadPaciente.UseVisualStyleBackColor = true;
-            // 
-            // btnInfoPaciente_Confirmar
-            // 
-            this.btnInfoPaciente_Confirmar.Location = new System.Drawing.Point(359, 239);
-            this.btnInfoPaciente_Confirmar.Name = "btnInfoPaciente_Confirmar";
-            this.btnInfoPaciente_Confirmar.Size = new System.Drawing.Size(303, 23);
-            this.btnInfoPaciente_Confirmar.TabIndex = 55;
-            this.btnInfoPaciente_Confirmar.Text = "Confirmar";
-            this.btnInfoPaciente_Confirmar.UseVisualStyleBackColor = true;
-            // 
-            // txtInfoPaciente_Password
-            // 
-            this.txtInfoPaciente_Password.Location = new System.Drawing.Point(458, 210);
-            this.txtInfoPaciente_Password.Name = "txtInfoPaciente_Password";
-            this.txtInfoPaciente_Password.Size = new System.Drawing.Size(204, 20);
-            this.txtInfoPaciente_Password.TabIndex = 54;
-            this.txtInfoPaciente_Password.UseSystemPasswordChar = true;
-            // 
-            // lblInfo_NuevaPassword
-            // 
-            this.lblInfo_NuevaPassword.AutoSize = true;
-            this.lblInfo_NuevaPassword.Location = new System.Drawing.Point(356, 213);
-            this.lblInfo_NuevaPassword.Name = "lblInfo_NuevaPassword";
-            this.lblInfo_NuevaPassword.Size = new System.Drawing.Size(96, 13);
-            this.lblInfo_NuevaPassword.TabIndex = 53;
-            this.lblInfo_NuevaPassword.Text = "Nueva Contraseña";
             // 
             // btnInfoPaciente_Guardar
             // 
@@ -499,9 +469,6 @@
         private System.Windows.Forms.Label lblInfo_Sexo;
         private System.Windows.Forms.Label lblInfo_TipoSangre;
         private System.Windows.Forms.Button btnInfoPaciente_Guardar;
-        private System.Windows.Forms.Button btnInfoPaciente_Confirmar;
-        private System.Windows.Forms.TextBox txtInfoPaciente_Password;
-        private System.Windows.Forms.Label lblInfo_NuevaPassword;
         private System.Windows.Forms.TabPage tabReadRecetas;
         private System.Windows.Forms.Label lblRecetas_Receta;
         private System.Windows.Forms.DataGridView dgvRecetas_Medicamentos;
