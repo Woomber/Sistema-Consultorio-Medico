@@ -93,17 +93,14 @@
             this.txtNuevoSecretario_ApellidoPaterno = new System.Windows.Forms.TextBox();
             this.txtNuevoSecretario_Nombres = new System.Windows.Forms.TextBox();
             this.tabUpdateSecretario = new System.Windows.Forms.TabPage();
-            this.btnAdministrarSecretario_Confirmar = new System.Windows.Forms.Button();
             this.cbAdministrarSecretario_Secretario = new System.Windows.Forms.ComboBox();
             this.lblAdministrarSecretario_Secretario = new System.Windows.Forms.Label();
-            this.lblAdministrarSecretario_NuevaPassword = new System.Windows.Forms.Label();
             this.lblAdministrarSecretario_Fecha = new System.Windows.Forms.Label();
             this.lblAdministrarSecretario_ApellidoMaterno = new System.Windows.Forms.Label();
             this.lblAdministrarSecretario_ApellidoPaterno = new System.Windows.Forms.Label();
             this.lblAdministrarSecretario_Nombres = new System.Windows.Forms.Label();
             this.btnAdministrarSecretario_Modificar = new System.Windows.Forms.Button();
             this.calendarAdministrarSecretario_Fecha = new System.Windows.Forms.MonthCalendar();
-            this.txtAdministrarSecretario_Password = new System.Windows.Forms.TextBox();
             this.cbAdministrarSecretario_Turno = new System.Windows.Forms.ComboBox();
             this.lblAdministrarSecretario_Turno = new System.Windows.Forms.Label();
             this.lblAdministrarSecretario_Telefono = new System.Windows.Forms.Label();
@@ -112,12 +109,8 @@
             this.txtAdministrarSecretario_ApellidoPaterno = new System.Windows.Forms.TextBox();
             this.txtAdministrarSecretario_Nombres = new System.Windows.Forms.TextBox();
             this.tabCreateMedico = new System.Windows.Forms.TabPage();
-            this.lblNuevoMedico_hrs = new System.Windows.Forms.Label();
-            this.btnNuevoMedico_Agregar = new System.Windows.Forms.Button();
-            this.lblNuevoMedico_Horarios = new System.Windows.Forms.Label();
-            this.listNuevoMedico_Horarios = new System.Windows.Forms.ListBox();
-            this.nudNuevoMedico_Horario = new System.Windows.Forms.NumericUpDown();
-            this.cbNuevoMedico_DiaSemana = new System.Windows.Forms.ComboBox();
+            this.cbNuevoMedico_Sexo = new System.Windows.Forms.ComboBox();
+            this.lblNuevoMedico_Sexo = new System.Windows.Forms.Label();
             this.lblNuevoMedico_Especialidad = new System.Windows.Forms.Label();
             this.txtNuevoMedico_Especialidad = new System.Windows.Forms.TextBox();
             this.lblNuevoMedico_Password = new System.Windows.Forms.Label();
@@ -127,7 +120,7 @@
             this.lblNuevoMedico_ApellidoPaterno = new System.Windows.Forms.Label();
             this.lblNuevoMedico_Nombres = new System.Windows.Forms.Label();
             this.btnNuevoMedico_Alta = new System.Windows.Forms.Button();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.calendarNuevoMedico_Fecha = new System.Windows.Forms.MonthCalendar();
             this.txtNuevoMedico_Password = new System.Windows.Forms.TextBox();
             this.txtNuevoMedico_Username = new System.Windows.Forms.TextBox();
             this.lblNuevoMedico_Telefono = new System.Windows.Forms.Label();
@@ -135,6 +128,15 @@
             this.txtNuevoMedico_ApellidoMaterno = new System.Windows.Forms.TextBox();
             this.txtNuevoMedico_ApellidoPaterno = new System.Windows.Forms.TextBox();
             this.txtNuevoMedico_Nombres = new System.Windows.Forms.TextBox();
+            this.tabCreateHorario = new System.Windows.Forms.TabPage();
+            this.lblHorarios_Medico = new System.Windows.Forms.Label();
+            this.cbHorarios_Medico = new System.Windows.Forms.ComboBox();
+            this.lblNuevoMedico_hrs = new System.Windows.Forms.Label();
+            this.btnHorario_Agregar = new System.Windows.Forms.Button();
+            this.lblNuevoMedico_Horarios = new System.Windows.Forms.Label();
+            this.nudHorario_Horario = new System.Windows.Forms.NumericUpDown();
+            this.cbHorario_DiaSemana = new System.Windows.Forms.ComboBox();
+            this.dgvHorarios_Horario = new System.Windows.Forms.DataGridView();
             this.tcMain.SuspendLayout();
             this.tabVerMedico.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerMedico)).BeginInit();
@@ -146,7 +148,9 @@
             this.tabCreateSecretario.SuspendLayout();
             this.tabUpdateSecretario.SuspendLayout();
             this.tabCreateMedico.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudNuevoMedico_Horario)).BeginInit();
+            this.tabCreateHorario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHorario_Horario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHorarios_Horario)).BeginInit();
             this.SuspendLayout();
             // 
             // tcMain
@@ -159,12 +163,13 @@
             this.tcMain.Controls.Add(this.tabCreateSecretario);
             this.tcMain.Controls.Add(this.tabUpdateSecretario);
             this.tcMain.Controls.Add(this.tabCreateMedico);
+            this.tcMain.Controls.Add(this.tabCreateHorario);
             this.tcMain.Dock = System.Windows.Forms.DockStyle.Top;
             this.tcMain.Location = new System.Drawing.Point(0, 0);
             this.tcMain.Multiline = true;
             this.tcMain.Name = "tcMain";
             this.tcMain.SelectedIndex = 0;
-            this.tcMain.Size = new System.Drawing.Size(744, 341);
+            this.tcMain.Size = new System.Drawing.Size(789, 341);
             this.tcMain.TabIndex = 0;
             // 
             // tabVerMedico
@@ -173,7 +178,7 @@
             this.tabVerMedico.Location = new System.Drawing.Point(4, 22);
             this.tabVerMedico.Name = "tabVerMedico";
             this.tabVerMedico.Padding = new System.Windows.Forms.Padding(3);
-            this.tabVerMedico.Size = new System.Drawing.Size(736, 315);
+            this.tabVerMedico.Size = new System.Drawing.Size(781, 315);
             this.tabVerMedico.TabIndex = 0;
             this.tabVerMedico.Text = "Ver Médico";
             this.tabVerMedico.UseVisualStyleBackColor = true;
@@ -184,7 +189,7 @@
             this.dgvVerMedico.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvVerMedico.Location = new System.Drawing.Point(3, 3);
             this.dgvVerMedico.Name = "dgvVerMedico";
-            this.dgvVerMedico.Size = new System.Drawing.Size(730, 309);
+            this.dgvVerMedico.Size = new System.Drawing.Size(775, 309);
             this.dgvVerMedico.TabIndex = 3;
             // 
             // tabReadCitas
@@ -195,7 +200,7 @@
             this.tabReadCitas.Location = new System.Drawing.Point(4, 22);
             this.tabReadCitas.Name = "tabReadCitas";
             this.tabReadCitas.Padding = new System.Windows.Forms.Padding(3);
-            this.tabReadCitas.Size = new System.Drawing.Size(736, 315);
+            this.tabReadCitas.Size = new System.Drawing.Size(781, 315);
             this.tabReadCitas.TabIndex = 1;
             this.tabReadCitas.Text = "Ver Citas";
             this.tabReadCitas.UseVisualStyleBackColor = true;
@@ -219,6 +224,7 @@
             // 
             // cbVerCita_Medico
             // 
+            this.cbVerCita_Medico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbVerCita_Medico.FormattingEnabled = true;
             this.cbVerCita_Medico.Location = new System.Drawing.Point(56, 11);
             this.cbVerCita_Medico.Name = "cbVerCita_Medico";
@@ -240,7 +246,7 @@
             this.tabCreateCitas.Controls.Add(this.calendarNuevaCita);
             this.tabCreateCitas.Location = new System.Drawing.Point(4, 22);
             this.tabCreateCitas.Name = "tabCreateCitas";
-            this.tabCreateCitas.Size = new System.Drawing.Size(736, 315);
+            this.tabCreateCitas.Size = new System.Drawing.Size(781, 315);
             this.tabCreateCitas.TabIndex = 2;
             this.tabCreateCitas.Text = "Nueva Cita";
             this.tabCreateCitas.UseVisualStyleBackColor = true;
@@ -248,7 +254,7 @@
             // lblNuevaCita_Hora
             // 
             this.lblNuevaCita_Hora.AutoSize = true;
-            this.lblNuevaCita_Hora.Location = new System.Drawing.Point(311, 67);
+            this.lblNuevaCita_Hora.Location = new System.Drawing.Point(311, 74);
             this.lblNuevaCita_Hora.Name = "lblNuevaCita_Hora";
             this.lblNuevaCita_Hora.Size = new System.Drawing.Size(30, 13);
             this.lblNuevaCita_Hora.TabIndex = 9;
@@ -301,6 +307,7 @@
             // 
             // cbNuevaCita_Paciente
             // 
+            this.cbNuevaCita_Paciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNuevaCita_Paciente.FormattingEnabled = true;
             this.cbNuevaCita_Paciente.Location = new System.Drawing.Point(63, 91);
             this.cbNuevaCita_Paciente.Name = "cbNuevaCita_Paciente";
@@ -309,11 +316,13 @@
             // 
             // cbNuevaCita_Medico
             // 
+            this.cbNuevaCita_Medico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNuevaCita_Medico.FormattingEnabled = true;
             this.cbNuevaCita_Medico.Location = new System.Drawing.Point(63, 64);
             this.cbNuevaCita_Medico.Name = "cbNuevaCita_Medico";
             this.cbNuevaCita_Medico.Size = new System.Drawing.Size(227, 21);
             this.cbNuevaCita_Medico.TabIndex = 2;
+            this.cbNuevaCita_Medico.SelectedIndexChanged += new System.EventHandler(this.cbNuevaCita_Medico_SelectedIndexChanged);
             // 
             // txtNuevaCita_Motivo
             // 
@@ -328,6 +337,7 @@
             this.calendarNuevaCita.Location = new System.Drawing.Point(446, 64);
             this.calendarNuevaCita.Name = "calendarNuevaCita";
             this.calendarNuevaCita.TabIndex = 0;
+            this.calendarNuevaCita.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calendarNuevaCita_DateChanged);
             // 
             // tabCreatePacientes
             // 
@@ -356,7 +366,7 @@
             this.tabCreatePacientes.Controls.Add(this.txtNuevoPaciente_Nombres);
             this.tabCreatePacientes.Location = new System.Drawing.Point(4, 22);
             this.tabCreatePacientes.Name = "tabCreatePacientes";
-            this.tabCreatePacientes.Size = new System.Drawing.Size(736, 315);
+            this.tabCreatePacientes.Size = new System.Drawing.Size(781, 315);
             this.tabCreatePacientes.TabIndex = 4;
             this.tabCreatePacientes.Text = "Nuevo Paciente";
             this.tabCreatePacientes.UseVisualStyleBackColor = true;
@@ -423,6 +433,7 @@
             this.btnNuevoPaciente_Agregar.TabIndex = 39;
             this.btnNuevoPaciente_Agregar.Text = "Agregar";
             this.btnNuevoPaciente_Agregar.UseVisualStyleBackColor = true;
+            this.btnNuevoPaciente_Agregar.Click += new System.EventHandler(this.btnNuevoPaciente_Agregar_Click);
             // 
             // calendarNuevoPaciente_Fecha
             // 
@@ -571,7 +582,7 @@
             this.tabUpdatePacientes.Controls.Add(this.cbAdministrarPaciente_Paciente);
             this.tabUpdatePacientes.Location = new System.Drawing.Point(4, 22);
             this.tabUpdatePacientes.Name = "tabUpdatePacientes";
-            this.tabUpdatePacientes.Size = new System.Drawing.Size(736, 315);
+            this.tabUpdatePacientes.Size = new System.Drawing.Size(781, 315);
             this.tabUpdatePacientes.TabIndex = 5;
             this.tabUpdatePacientes.Text = "Administrar Pacientes";
             this.tabUpdatePacientes.UseVisualStyleBackColor = true;
@@ -593,9 +604,11 @@
             this.btnAdministrarPaciente_Eliminar.TabIndex = 5;
             this.btnAdministrarPaciente_Eliminar.Text = "Eliminar";
             this.btnAdministrarPaciente_Eliminar.UseVisualStyleBackColor = true;
+            this.btnAdministrarPaciente_Eliminar.Click += new System.EventHandler(this.btnAdministrarPaciente_Eliminar_Click);
             // 
             // cbAdministrarPaciente_Paciente
             // 
+            this.cbAdministrarPaciente_Paciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAdministrarPaciente_Paciente.FormattingEnabled = true;
             this.cbAdministrarPaciente_Paciente.Location = new System.Drawing.Point(191, 51);
             this.cbAdministrarPaciente_Paciente.Name = "cbAdministrarPaciente_Paciente";
@@ -623,7 +636,7 @@
             this.tabCreateSecretario.Controls.Add(this.txtNuevoSecretario_Nombres);
             this.tabCreateSecretario.Location = new System.Drawing.Point(4, 22);
             this.tabCreateSecretario.Name = "tabCreateSecretario";
-            this.tabCreateSecretario.Size = new System.Drawing.Size(736, 315);
+            this.tabCreateSecretario.Size = new System.Drawing.Size(781, 315);
             this.tabCreateSecretario.TabIndex = 6;
             this.tabCreateSecretario.Text = "Nuevo Secretario";
             this.tabCreateSecretario.UseVisualStyleBackColor = true;
@@ -690,6 +703,7 @@
             this.btnNuevoSecretario_Agregar.TabIndex = 62;
             this.btnNuevoSecretario_Agregar.Text = "Agregar";
             this.btnNuevoSecretario_Agregar.UseVisualStyleBackColor = true;
+            this.btnNuevoSecretario_Agregar.Click += new System.EventHandler(this.btnNuevoSecretario_Agregar_Click);
             // 
             // calendarNuevoSecretario_Fecha
             // 
@@ -714,6 +728,7 @@
             // 
             // cbNuevoSecretario_Turno
             // 
+            this.cbNuevoSecretario_Turno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNuevoSecretario_Turno.FormattingEnabled = true;
             this.cbNuevoSecretario_Turno.Items.AddRange(new object[] {
             "Matutino",
@@ -772,17 +787,14 @@
             // 
             // tabUpdateSecretario
             // 
-            this.tabUpdateSecretario.Controls.Add(this.btnAdministrarSecretario_Confirmar);
             this.tabUpdateSecretario.Controls.Add(this.cbAdministrarSecretario_Secretario);
             this.tabUpdateSecretario.Controls.Add(this.lblAdministrarSecretario_Secretario);
-            this.tabUpdateSecretario.Controls.Add(this.lblAdministrarSecretario_NuevaPassword);
             this.tabUpdateSecretario.Controls.Add(this.lblAdministrarSecretario_Fecha);
             this.tabUpdateSecretario.Controls.Add(this.lblAdministrarSecretario_ApellidoMaterno);
             this.tabUpdateSecretario.Controls.Add(this.lblAdministrarSecretario_ApellidoPaterno);
             this.tabUpdateSecretario.Controls.Add(this.lblAdministrarSecretario_Nombres);
             this.tabUpdateSecretario.Controls.Add(this.btnAdministrarSecretario_Modificar);
             this.tabUpdateSecretario.Controls.Add(this.calendarAdministrarSecretario_Fecha);
-            this.tabUpdateSecretario.Controls.Add(this.txtAdministrarSecretario_Password);
             this.tabUpdateSecretario.Controls.Add(this.cbAdministrarSecretario_Turno);
             this.tabUpdateSecretario.Controls.Add(this.lblAdministrarSecretario_Turno);
             this.tabUpdateSecretario.Controls.Add(this.lblAdministrarSecretario_Telefono);
@@ -792,27 +804,20 @@
             this.tabUpdateSecretario.Controls.Add(this.txtAdministrarSecretario_Nombres);
             this.tabUpdateSecretario.Location = new System.Drawing.Point(4, 22);
             this.tabUpdateSecretario.Name = "tabUpdateSecretario";
-            this.tabUpdateSecretario.Size = new System.Drawing.Size(736, 315);
+            this.tabUpdateSecretario.Size = new System.Drawing.Size(781, 315);
             this.tabUpdateSecretario.TabIndex = 7;
             this.tabUpdateSecretario.Text = "Administrar Secretario";
             this.tabUpdateSecretario.UseVisualStyleBackColor = true;
             // 
-            // btnAdministrarSecretario_Confirmar
-            // 
-            this.btnAdministrarSecretario_Confirmar.Location = new System.Drawing.Point(401, 260);
-            this.btnAdministrarSecretario_Confirmar.Name = "btnAdministrarSecretario_Confirmar";
-            this.btnAdministrarSecretario_Confirmar.Size = new System.Drawing.Size(313, 23);
-            this.btnAdministrarSecretario_Confirmar.TabIndex = 88;
-            this.btnAdministrarSecretario_Confirmar.Text = "Confirmar";
-            this.btnAdministrarSecretario_Confirmar.UseVisualStyleBackColor = true;
-            // 
             // cbAdministrarSecretario_Secretario
             // 
+            this.cbAdministrarSecretario_Secretario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAdministrarSecretario_Secretario.FormattingEnabled = true;
             this.cbAdministrarSecretario_Secretario.Location = new System.Drawing.Point(25, 51);
             this.cbAdministrarSecretario_Secretario.Name = "cbAdministrarSecretario_Secretario";
             this.cbAdministrarSecretario_Secretario.Size = new System.Drawing.Size(308, 21);
             this.cbAdministrarSecretario_Secretario.TabIndex = 87;
+            this.cbAdministrarSecretario_Secretario.SelectedIndexChanged += new System.EventHandler(this.cbAdministrarSecretario_Secretario_SelectedIndexChanged);
             // 
             // lblAdministrarSecretario_Secretario
             // 
@@ -822,15 +827,6 @@
             this.lblAdministrarSecretario_Secretario.Size = new System.Drawing.Size(94, 13);
             this.lblAdministrarSecretario_Secretario.TabIndex = 86;
             this.lblAdministrarSecretario_Secretario.Text = "Secretario a Editar";
-            // 
-            // lblAdministrarSecretario_NuevaPassword
-            // 
-            this.lblAdministrarSecretario_NuevaPassword.AutoSize = true;
-            this.lblAdministrarSecretario_NuevaPassword.Location = new System.Drawing.Point(398, 235);
-            this.lblAdministrarSecretario_NuevaPassword.Name = "lblAdministrarSecretario_NuevaPassword";
-            this.lblAdministrarSecretario_NuevaPassword.Size = new System.Drawing.Size(95, 13);
-            this.lblAdministrarSecretario_NuevaPassword.TabIndex = 85;
-            this.lblAdministrarSecretario_NuevaPassword.Text = "Nueva contraseña";
             // 
             // lblAdministrarSecretario_Fecha
             // 
@@ -876,6 +872,7 @@
             this.btnAdministrarSecretario_Modificar.TabIndex = 79;
             this.btnAdministrarSecretario_Modificar.Text = "Modificar";
             this.btnAdministrarSecretario_Modificar.UseVisualStyleBackColor = true;
+            this.btnAdministrarSecretario_Modificar.Click += new System.EventHandler(this.btnAdministrarSecretario_Modificar_Click);
             // 
             // calendarAdministrarSecretario_Fecha
             // 
@@ -883,16 +880,9 @@
             this.calendarAdministrarSecretario_Fecha.Name = "calendarAdministrarSecretario_Fecha";
             this.calendarAdministrarSecretario_Fecha.TabIndex = 78;
             // 
-            // txtAdministrarSecretario_Password
-            // 
-            this.txtAdministrarSecretario_Password.Location = new System.Drawing.Point(499, 232);
-            this.txtAdministrarSecretario_Password.Name = "txtAdministrarSecretario_Password";
-            this.txtAdministrarSecretario_Password.Size = new System.Drawing.Size(215, 20);
-            this.txtAdministrarSecretario_Password.TabIndex = 77;
-            this.txtAdministrarSecretario_Password.UseSystemPasswordChar = true;
-            // 
             // cbAdministrarSecretario_Turno
             // 
+            this.cbAdministrarSecretario_Turno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAdministrarSecretario_Turno.FormattingEnabled = true;
             this.cbAdministrarSecretario_Turno.Items.AddRange(new object[] {
             "Matutino",
@@ -951,12 +941,8 @@
             // 
             // tabCreateMedico
             // 
-            this.tabCreateMedico.Controls.Add(this.lblNuevoMedico_hrs);
-            this.tabCreateMedico.Controls.Add(this.btnNuevoMedico_Agregar);
-            this.tabCreateMedico.Controls.Add(this.lblNuevoMedico_Horarios);
-            this.tabCreateMedico.Controls.Add(this.listNuevoMedico_Horarios);
-            this.tabCreateMedico.Controls.Add(this.nudNuevoMedico_Horario);
-            this.tabCreateMedico.Controls.Add(this.cbNuevoMedico_DiaSemana);
+            this.tabCreateMedico.Controls.Add(this.cbNuevoMedico_Sexo);
+            this.tabCreateMedico.Controls.Add(this.lblNuevoMedico_Sexo);
             this.tabCreateMedico.Controls.Add(this.lblNuevoMedico_Especialidad);
             this.tabCreateMedico.Controls.Add(this.txtNuevoMedico_Especialidad);
             this.tabCreateMedico.Controls.Add(this.lblNuevoMedico_Password);
@@ -966,7 +952,7 @@
             this.tabCreateMedico.Controls.Add(this.lblNuevoMedico_ApellidoPaterno);
             this.tabCreateMedico.Controls.Add(this.lblNuevoMedico_Nombres);
             this.tabCreateMedico.Controls.Add(this.btnNuevoMedico_Alta);
-            this.tabCreateMedico.Controls.Add(this.monthCalendar1);
+            this.tabCreateMedico.Controls.Add(this.calendarNuevoMedico_Fecha);
             this.tabCreateMedico.Controls.Add(this.txtNuevoMedico_Password);
             this.tabCreateMedico.Controls.Add(this.txtNuevoMedico_Username);
             this.tabCreateMedico.Controls.Add(this.lblNuevoMedico_Telefono);
@@ -977,68 +963,31 @@
             this.tabCreateMedico.Location = new System.Drawing.Point(4, 22);
             this.tabCreateMedico.Name = "tabCreateMedico";
             this.tabCreateMedico.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCreateMedico.Size = new System.Drawing.Size(736, 315);
+            this.tabCreateMedico.Size = new System.Drawing.Size(781, 315);
             this.tabCreateMedico.TabIndex = 8;
             this.tabCreateMedico.Text = "Nuevo Médico";
             this.tabCreateMedico.UseVisualStyleBackColor = true;
             // 
-            // lblNuevoMedico_hrs
+            // cbNuevoMedico_Sexo
             // 
-            this.lblNuevoMedico_hrs.AutoSize = true;
-            this.lblNuevoMedico_hrs.Location = new System.Drawing.Point(693, 93);
-            this.lblNuevoMedico_hrs.Name = "lblNuevoMedico_hrs";
-            this.lblNuevoMedico_hrs.Size = new System.Drawing.Size(21, 13);
-            this.lblNuevoMedico_hrs.TabIndex = 93;
-            this.lblNuevoMedico_hrs.Text = "hrs";
+            this.cbNuevoMedico_Sexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNuevoMedico_Sexo.FormattingEnabled = true;
+            this.cbNuevoMedico_Sexo.Items.AddRange(new object[] {
+            "Hombre",
+            "Mujer"});
+            this.cbNuevoMedico_Sexo.Location = new System.Drawing.Point(112, 147);
+            this.cbNuevoMedico_Sexo.Name = "cbNuevoMedico_Sexo";
+            this.cbNuevoMedico_Sexo.Size = new System.Drawing.Size(247, 21);
+            this.cbNuevoMedico_Sexo.TabIndex = 89;
             // 
-            // btnNuevoMedico_Agregar
+            // lblNuevoMedico_Sexo
             // 
-            this.btnNuevoMedico_Agregar.Location = new System.Drawing.Point(580, 119);
-            this.btnNuevoMedico_Agregar.Name = "btnNuevoMedico_Agregar";
-            this.btnNuevoMedico_Agregar.Size = new System.Drawing.Size(133, 23);
-            this.btnNuevoMedico_Agregar.TabIndex = 92;
-            this.btnNuevoMedico_Agregar.Text = "Agregar";
-            this.btnNuevoMedico_Agregar.UseVisualStyleBackColor = true;
-            // 
-            // lblNuevoMedico_Horarios
-            // 
-            this.lblNuevoMedico_Horarios.AutoSize = true;
-            this.lblNuevoMedico_Horarios.Location = new System.Drawing.Point(413, 74);
-            this.lblNuevoMedico_Horarios.Name = "lblNuevoMedico_Horarios";
-            this.lblNuevoMedico_Horarios.Size = new System.Drawing.Size(46, 13);
-            this.lblNuevoMedico_Horarios.TabIndex = 91;
-            this.lblNuevoMedico_Horarios.Text = "Horarios";
-            // 
-            // listNuevoMedico_Horarios
-            // 
-            this.listNuevoMedico_Horarios.FormattingEnabled = true;
-            this.listNuevoMedico_Horarios.Location = new System.Drawing.Point(416, 119);
-            this.listNuevoMedico_Horarios.Name = "listNuevoMedico_Horarios";
-            this.listNuevoMedico_Horarios.Size = new System.Drawing.Size(158, 121);
-            this.listNuevoMedico_Horarios.TabIndex = 90;
-            // 
-            // nudNuevoMedico_Horario
-            // 
-            this.nudNuevoMedico_Horario.Location = new System.Drawing.Point(580, 90);
-            this.nudNuevoMedico_Horario.Name = "nudNuevoMedico_Horario";
-            this.nudNuevoMedico_Horario.Size = new System.Drawing.Size(107, 20);
-            this.nudNuevoMedico_Horario.TabIndex = 89;
-            // 
-            // cbNuevoMedico_DiaSemana
-            // 
-            this.cbNuevoMedico_DiaSemana.FormattingEnabled = true;
-            this.cbNuevoMedico_DiaSemana.Items.AddRange(new object[] {
-            "Lunes",
-            "Martes",
-            "Miércoles",
-            "Jueves",
-            "Viernes",
-            "Sábado",
-            "Domingo"});
-            this.cbNuevoMedico_DiaSemana.Location = new System.Drawing.Point(416, 90);
-            this.cbNuevoMedico_DiaSemana.Name = "cbNuevoMedico_DiaSemana";
-            this.cbNuevoMedico_DiaSemana.Size = new System.Drawing.Size(158, 21);
-            this.cbNuevoMedico_DiaSemana.TabIndex = 88;
+            this.lblNuevoMedico_Sexo.AutoSize = true;
+            this.lblNuevoMedico_Sexo.Location = new System.Drawing.Point(74, 150);
+            this.lblNuevoMedico_Sexo.Name = "lblNuevoMedico_Sexo";
+            this.lblNuevoMedico_Sexo.Size = new System.Drawing.Size(31, 13);
+            this.lblNuevoMedico_Sexo.TabIndex = 88;
+            this.lblNuevoMedico_Sexo.Text = "Sexo";
             // 
             // lblNuevoMedico_Especialidad
             // 
@@ -1059,7 +1008,7 @@
             // lblNuevoMedico_Password
             // 
             this.lblNuevoMedico_Password.AutoSize = true;
-            this.lblNuevoMedico_Password.Location = new System.Drawing.Point(398, 40);
+            this.lblNuevoMedico_Password.Location = new System.Drawing.Point(45, 203);
             this.lblNuevoMedico_Password.Name = "lblNuevoMedico_Password";
             this.lblNuevoMedico_Password.Size = new System.Drawing.Size(61, 13);
             this.lblNuevoMedico_Password.TabIndex = 85;
@@ -1068,7 +1017,7 @@
             // lblNuevoMedico_Username
             // 
             this.lblNuevoMedico_Username.AutoSize = true;
-            this.lblNuevoMedico_Username.Location = new System.Drawing.Point(416, 14);
+            this.lblNuevoMedico_Username.Location = new System.Drawing.Point(63, 177);
             this.lblNuevoMedico_Username.Name = "lblNuevoMedico_Username";
             this.lblNuevoMedico_Username.Size = new System.Drawing.Size(43, 13);
             this.lblNuevoMedico_Username.TabIndex = 84;
@@ -1077,7 +1026,7 @@
             // lblNuevoMedico_Fecha
             // 
             this.lblNuevoMedico_Fecha.AutoSize = true;
-            this.lblNuevoMedico_Fecha.Location = new System.Drawing.Point(12, 152);
+            this.lblNuevoMedico_Fecha.Location = new System.Drawing.Point(425, 48);
             this.lblNuevoMedico_Fecha.Name = "lblNuevoMedico_Fecha";
             this.lblNuevoMedico_Fecha.Size = new System.Drawing.Size(93, 13);
             this.lblNuevoMedico_Fecha.TabIndex = 83;
@@ -1112,22 +1061,23 @@
             // 
             // btnNuevoMedico_Alta
             // 
-            this.btnNuevoMedico_Alta.Location = new System.Drawing.Point(388, 273);
+            this.btnNuevoMedico_Alta.Location = new System.Drawing.Point(6, 266);
             this.btnNuevoMedico_Alta.Name = "btnNuevoMedico_Alta";
-            this.btnNuevoMedico_Alta.Size = new System.Drawing.Size(326, 23);
+            this.btnNuevoMedico_Alta.Size = new System.Drawing.Size(766, 23);
             this.btnNuevoMedico_Alta.TabIndex = 79;
             this.btnNuevoMedico_Alta.Text = "Dar de alta";
             this.btnNuevoMedico_Alta.UseVisualStyleBackColor = true;
+            this.btnNuevoMedico_Alta.Click += new System.EventHandler(this.btnNuevoMedico_Alta_Click);
             // 
-            // monthCalendar1
+            // calendarNuevoMedico_Fecha
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(111, 144);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 78;
+            this.calendarNuevoMedico_Fecha.Location = new System.Drawing.Point(521, 39);
+            this.calendarNuevoMedico_Fecha.Name = "calendarNuevoMedico_Fecha";
+            this.calendarNuevoMedico_Fecha.TabIndex = 78;
             // 
             // txtNuevoMedico_Password
             // 
-            this.txtNuevoMedico_Password.Location = new System.Drawing.Point(465, 37);
+            this.txtNuevoMedico_Password.Location = new System.Drawing.Point(112, 200);
             this.txtNuevoMedico_Password.Name = "txtNuevoMedico_Password";
             this.txtNuevoMedico_Password.Size = new System.Drawing.Size(249, 20);
             this.txtNuevoMedico_Password.TabIndex = 77;
@@ -1135,7 +1085,7 @@
             // 
             // txtNuevoMedico_Username
             // 
-            this.txtNuevoMedico_Username.Location = new System.Drawing.Point(465, 11);
+            this.txtNuevoMedico_Username.Location = new System.Drawing.Point(112, 174);
             this.txtNuevoMedico_Username.Name = "txtNuevoMedico_Username";
             this.txtNuevoMedico_Username.Size = new System.Drawing.Size(248, 20);
             this.txtNuevoMedico_Username.TabIndex = 76;
@@ -1177,11 +1127,119 @@
             this.txtNuevoMedico_Nombres.Size = new System.Drawing.Size(248, 20);
             this.txtNuevoMedico_Nombres.TabIndex = 69;
             // 
+            // tabCreateHorario
+            // 
+            this.tabCreateHorario.Controls.Add(this.dgvHorarios_Horario);
+            this.tabCreateHorario.Controls.Add(this.lblHorarios_Medico);
+            this.tabCreateHorario.Controls.Add(this.cbHorarios_Medico);
+            this.tabCreateHorario.Controls.Add(this.lblNuevoMedico_hrs);
+            this.tabCreateHorario.Controls.Add(this.btnHorario_Agregar);
+            this.tabCreateHorario.Controls.Add(this.lblNuevoMedico_Horarios);
+            this.tabCreateHorario.Controls.Add(this.nudHorario_Horario);
+            this.tabCreateHorario.Controls.Add(this.cbHorario_DiaSemana);
+            this.tabCreateHorario.Location = new System.Drawing.Point(4, 22);
+            this.tabCreateHorario.Name = "tabCreateHorario";
+            this.tabCreateHorario.Padding = new System.Windows.Forms.Padding(3);
+            this.tabCreateHorario.Size = new System.Drawing.Size(781, 315);
+            this.tabCreateHorario.TabIndex = 9;
+            this.tabCreateHorario.Text = "Horarios Médico";
+            this.tabCreateHorario.UseVisualStyleBackColor = true;
+            // 
+            // lblHorarios_Medico
+            // 
+            this.lblHorarios_Medico.AutoSize = true;
+            this.lblHorarios_Medico.Location = new System.Drawing.Point(129, 64);
+            this.lblHorarios_Medico.Name = "lblHorarios_Medico";
+            this.lblHorarios_Medico.Size = new System.Drawing.Size(42, 13);
+            this.lblHorarios_Medico.TabIndex = 101;
+            this.lblHorarios_Medico.Text = "Médico";
+            // 
+            // cbHorarios_Medico
+            // 
+            this.cbHorarios_Medico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbHorarios_Medico.FormattingEnabled = true;
+            this.cbHorarios_Medico.Items.AddRange(new object[] {
+            "Lunes",
+            "Martes",
+            "Miércoles",
+            "Jueves",
+            "Viernes",
+            "Sábado",
+            "Domingo"});
+            this.cbHorarios_Medico.Location = new System.Drawing.Point(128, 80);
+            this.cbHorarios_Medico.Name = "cbHorarios_Medico";
+            this.cbHorarios_Medico.Size = new System.Drawing.Size(241, 21);
+            this.cbHorarios_Medico.TabIndex = 100;
+            this.cbHorarios_Medico.SelectedIndexChanged += new System.EventHandler(this.cbHorarios_Medico_SelectedIndexChanged);
+            // 
+            // lblNuevoMedico_hrs
+            // 
+            this.lblNuevoMedico_hrs.AutoSize = true;
+            this.lblNuevoMedico_hrs.Location = new System.Drawing.Point(241, 180);
+            this.lblNuevoMedico_hrs.Name = "lblNuevoMedico_hrs";
+            this.lblNuevoMedico_hrs.Size = new System.Drawing.Size(21, 13);
+            this.lblNuevoMedico_hrs.TabIndex = 99;
+            this.lblNuevoMedico_hrs.Text = "hrs";
+            // 
+            // btnHorario_Agregar
+            // 
+            this.btnHorario_Agregar.Location = new System.Drawing.Point(129, 204);
+            this.btnHorario_Agregar.Name = "btnHorario_Agregar";
+            this.btnHorario_Agregar.Size = new System.Drawing.Size(240, 23);
+            this.btnHorario_Agregar.TabIndex = 98;
+            this.btnHorario_Agregar.Text = "Agregar";
+            this.btnHorario_Agregar.UseVisualStyleBackColor = true;
+            this.btnHorario_Agregar.Click += new System.EventHandler(this.btnHorario_Agregar_Click);
+            // 
+            // lblNuevoMedico_Horarios
+            // 
+            this.lblNuevoMedico_Horarios.AutoSize = true;
+            this.lblNuevoMedico_Horarios.Location = new System.Drawing.Point(125, 135);
+            this.lblNuevoMedico_Horarios.Name = "lblNuevoMedico_Horarios";
+            this.lblNuevoMedico_Horarios.Size = new System.Drawing.Size(46, 13);
+            this.lblNuevoMedico_Horarios.TabIndex = 97;
+            this.lblNuevoMedico_Horarios.Text = "Horarios";
+            // 
+            // nudHorario_Horario
+            // 
+            this.nudHorario_Horario.Location = new System.Drawing.Point(128, 178);
+            this.nudHorario_Horario.Name = "nudHorario_Horario";
+            this.nudHorario_Horario.Size = new System.Drawing.Size(107, 20);
+            this.nudHorario_Horario.TabIndex = 95;
+            // 
+            // cbHorario_DiaSemana
+            // 
+            this.cbHorario_DiaSemana.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbHorario_DiaSemana.FormattingEnabled = true;
+            this.cbHorario_DiaSemana.Items.AddRange(new object[] {
+            "Lunes",
+            "Martes",
+            "Miércoles",
+            "Jueves",
+            "Viernes",
+            "Sábado",
+            "Domingo"});
+            this.cbHorario_DiaSemana.Location = new System.Drawing.Point(128, 151);
+            this.cbHorario_DiaSemana.Name = "cbHorario_DiaSemana";
+            this.cbHorario_DiaSemana.Size = new System.Drawing.Size(241, 21);
+            this.cbHorario_DiaSemana.TabIndex = 94;
+            // 
+            // dgvHorarios_Horario
+            // 
+            this.dgvHorarios_Horario.AllowUserToAddRows = false;
+            this.dgvHorarios_Horario.AllowUserToDeleteRows = false;
+            this.dgvHorarios_Horario.AllowUserToResizeRows = false;
+            this.dgvHorarios_Horario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHorarios_Horario.Location = new System.Drawing.Point(417, 20);
+            this.dgvHorarios_Horario.Name = "dgvHorarios_Horario";
+            this.dgvHorarios_Horario.Size = new System.Drawing.Size(257, 274);
+            this.dgvHorarios_Horario.TabIndex = 102;
+            // 
             // FormSecretario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(744, 345);
+            this.ClientSize = new System.Drawing.Size(789, 345);
             this.Controls.Add(this.tcMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -1206,7 +1264,10 @@
             this.tabUpdateSecretario.PerformLayout();
             this.tabCreateMedico.ResumeLayout(false);
             this.tabCreateMedico.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudNuevoMedico_Horario)).EndInit();
+            this.tabCreateHorario.ResumeLayout(false);
+            this.tabCreateHorario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHorario_Horario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHorarios_Horario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1278,14 +1339,12 @@
         private System.Windows.Forms.TextBox txtNuevoSecretario_Nombres;
         private System.Windows.Forms.ComboBox cbAdministrarSecretario_Secretario;
         private System.Windows.Forms.Label lblAdministrarSecretario_Secretario;
-        private System.Windows.Forms.Label lblAdministrarSecretario_NuevaPassword;
         private System.Windows.Forms.Label lblAdministrarSecretario_Fecha;
         private System.Windows.Forms.Label lblAdministrarSecretario_ApellidoMaterno;
         private System.Windows.Forms.Label lblAdministrarSecretario_ApellidoPaterno;
         private System.Windows.Forms.Label lblAdministrarSecretario_Nombres;
         private System.Windows.Forms.Button btnAdministrarSecretario_Modificar;
         private System.Windows.Forms.MonthCalendar calendarAdministrarSecretario_Fecha;
-        private System.Windows.Forms.TextBox txtAdministrarSecretario_Password;
         private System.Windows.Forms.ComboBox cbAdministrarSecretario_Turno;
         private System.Windows.Forms.Label lblAdministrarSecretario_Turno;
         private System.Windows.Forms.Label lblAdministrarSecretario_Telefono;
@@ -1295,13 +1354,7 @@
         private System.Windows.Forms.TextBox txtAdministrarSecretario_Nombres;
         private System.Windows.Forms.ListBox listNuevaCita_Hora;
         private System.Windows.Forms.Label lblNuevaCita_Hora;
-        private System.Windows.Forms.Button btnAdministrarSecretario_Confirmar;
         private System.Windows.Forms.TabPage tabCreateMedico;
-        private System.Windows.Forms.Button btnNuevoMedico_Agregar;
-        private System.Windows.Forms.Label lblNuevoMedico_Horarios;
-        private System.Windows.Forms.ListBox listNuevoMedico_Horarios;
-        private System.Windows.Forms.NumericUpDown nudNuevoMedico_Horario;
-        private System.Windows.Forms.ComboBox cbNuevoMedico_DiaSemana;
         private System.Windows.Forms.Label lblNuevoMedico_Especialidad;
         private System.Windows.Forms.TextBox txtNuevoMedico_Especialidad;
         private System.Windows.Forms.Label lblNuevoMedico_Password;
@@ -1311,7 +1364,7 @@
         private System.Windows.Forms.Label lblNuevoMedico_ApellidoPaterno;
         private System.Windows.Forms.Label lblNuevoMedico_Nombres;
         private System.Windows.Forms.Button btnNuevoMedico_Alta;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.MonthCalendar calendarNuevoMedico_Fecha;
         private System.Windows.Forms.TextBox txtNuevoMedico_Password;
         private System.Windows.Forms.TextBox txtNuevoMedico_Username;
         private System.Windows.Forms.Label lblNuevoMedico_Telefono;
@@ -1319,6 +1372,16 @@
         private System.Windows.Forms.TextBox txtNuevoMedico_ApellidoMaterno;
         private System.Windows.Forms.TextBox txtNuevoMedico_ApellidoPaterno;
         private System.Windows.Forms.TextBox txtNuevoMedico_Nombres;
+        private System.Windows.Forms.TabPage tabCreateHorario;
+        private System.Windows.Forms.Label lblHorarios_Medico;
+        private System.Windows.Forms.ComboBox cbHorarios_Medico;
         private System.Windows.Forms.Label lblNuevoMedico_hrs;
+        private System.Windows.Forms.Button btnHorario_Agregar;
+        private System.Windows.Forms.Label lblNuevoMedico_Horarios;
+        private System.Windows.Forms.NumericUpDown nudHorario_Horario;
+        private System.Windows.Forms.ComboBox cbHorario_DiaSemana;
+        private System.Windows.Forms.ComboBox cbNuevoMedico_Sexo;
+        private System.Windows.Forms.Label lblNuevoMedico_Sexo;
+        private System.Windows.Forms.DataGridView dgvHorarios_Horario;
     }
 }
