@@ -13,14 +13,14 @@ namespace Consultorio_GUI
 {
     public partial class FormHistorial : Form
     {
-        WebServiceSoapClient client;
+        WebService1SoapClient client;
 
         public int PacienteActual { get; set; }
         public FormHistorial(int actual)
         {
             InitializeComponent();
 
-            client = new WebServiceSoapClient();
+            client = new WebService1SoapClient();
 
             PacienteActual = actual;
 
