@@ -1,0 +1,1182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="consulmedicoModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="consulmedicoModelStoreContainer">
+          <EntitySet Name="Cita" EntityType="consulmedicoModel.Store.Cita" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Cuenta" EntityType="consulmedicoModel.Store.Cuenta" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ExpFisica" EntityType="consulmedicoModel.Store.ExpFisica" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Horario" EntityType="consulmedicoModel.Store.Horario" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Interrogatorio" EntityType="consulmedicoModel.Store.Interrogatorio" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MedicamentoReceta" EntityType="consulmedicoModel.Store.MedicamentoReceta" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Medico" EntityType="consulmedicoModel.Store.Medico" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MedicoSecretario" EntityType="consulmedicoModel.Store.MedicoSecretario" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Paciente" EntityType="consulmedicoModel.Store.Paciente" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Receta" EntityType="consulmedicoModel.Store.Receta" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Secretario" EntityType="consulmedicoModel.Store.Secretario" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TipoCuenta" EntityType="consulmedicoModel.Store.TipoCuenta" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Vacuna" EntityType="consulmedicoModel.Store.Vacuna" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="VacunaPaciente" EntityType="consulmedicoModel.Store.VacunaPaciente" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__Cita__ID_Horario__5224328E" Association="consulmedicoModel.Store.FK__Cita__ID_Horario__5224328E">
+            <End Role="Horario" EntitySet="Horario" />
+            <End Role="Cita" EntitySet="Cita" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cita__ID_Medico__531856C7" Association="consulmedicoModel.Store.FK__Cita__ID_Medico__531856C7">
+            <End Role="Medico" EntitySet="Medico" />
+            <End Role="Cita" EntitySet="Cita" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cita__ID_Pacient__540C7B00" Association="consulmedicoModel.Store.FK__Cita__ID_Pacient__540C7B00">
+            <End Role="Paciente" EntitySet="Paciente" />
+            <End Role="Cita" EntitySet="Cita" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cuenta__ID_TipoC__55009F39" Association="consulmedicoModel.Store.FK__Cuenta__ID_TipoC__55009F39">
+            <End Role="TipoCuenta" EntitySet="TipoCuenta" />
+            <End Role="Cuenta" EntitySet="Cuenta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ExpFisica__ID_Ci__55F4C372" Association="consulmedicoModel.Store.FK__ExpFisica__ID_Ci__55F4C372">
+            <End Role="Cita" EntitySet="Cita" />
+            <End Role="ExpFisica" EntitySet="ExpFisica" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Horario__ID_Medi__56E8E7AB" Association="consulmedicoModel.Store.FK__Horario__ID_Medi__56E8E7AB">
+            <End Role="Medico" EntitySet="Medico" />
+            <End Role="Horario" EntitySet="Horario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Interroga__ID_Pa__57DD0BE4" Association="consulmedicoModel.Store.FK__Interroga__ID_Pa__57DD0BE4">
+            <End Role="Paciente" EntitySet="Paciente" />
+            <End Role="Interrogatorio" EntitySet="Interrogatorio" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Medicamen__ID_Re__58D1301D" Association="consulmedicoModel.Store.FK__Medicamen__ID_Re__58D1301D">
+            <End Role="Receta" EntitySet="Receta" />
+            <End Role="MedicamentoReceta" EntitySet="MedicamentoReceta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Medico__ID_Cuent__59C55456" Association="consulmedicoModel.Store.FK__Medico__ID_Cuent__59C55456">
+            <End Role="Cuenta" EntitySet="Cuenta" />
+            <End Role="Medico" EntitySet="Medico" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MedicoSec__ID_Me__5AB9788F" Association="consulmedicoModel.Store.FK__MedicoSec__ID_Me__5AB9788F">
+            <End Role="Medico" EntitySet="Medico" />
+            <End Role="MedicoSecretario" EntitySet="MedicoSecretario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MedicoSec__ID_Se__5BAD9CC8" Association="consulmedicoModel.Store.FK__MedicoSec__ID_Se__5BAD9CC8">
+            <End Role="Secretario" EntitySet="Secretario" />
+            <End Role="MedicoSecretario" EntitySet="MedicoSecretario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Paciente__ID_Cue__5CA1C101" Association="consulmedicoModel.Store.FK__Paciente__ID_Cue__5CA1C101">
+            <End Role="Cuenta" EntitySet="Cuenta" />
+            <End Role="Paciente" EntitySet="Paciente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Paciente__ID_Med__5D95E53A" Association="consulmedicoModel.Store.FK__Paciente__ID_Med__5D95E53A">
+            <End Role="Medico" EntitySet="Medico" />
+            <End Role="Paciente" EntitySet="Paciente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Receta__ID_Medic__5E8A0973" Association="consulmedicoModel.Store.FK__Receta__ID_Medic__5E8A0973">
+            <End Role="Medico" EntitySet="Medico" />
+            <End Role="Receta" EntitySet="Receta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Receta__ID_Pacie__5F7E2DAC" Association="consulmedicoModel.Store.FK__Receta__ID_Pacie__5F7E2DAC">
+            <End Role="Paciente" EntitySet="Paciente" />
+            <End Role="Receta" EntitySet="Receta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Secretari__ID_Cu__607251E5" Association="consulmedicoModel.Store.FK__Secretari__ID_Cu__607251E5">
+            <End Role="Cuenta" EntitySet="Cuenta" />
+            <End Role="Secretario" EntitySet="Secretario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VacunaPac__ID_Pa__6166761E" Association="consulmedicoModel.Store.FK__VacunaPac__ID_Pa__6166761E">
+            <End Role="Paciente" EntitySet="Paciente" />
+            <End Role="VacunaPaciente" EntitySet="VacunaPaciente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VacunaPac__ID_Va__625A9A57" Association="consulmedicoModel.Store.FK__VacunaPac__ID_Va__625A9A57">
+            <End Role="Vacuna" EntitySet="Vacuna" />
+            <End Role="VacunaPaciente" EntitySet="VacunaPaciente" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Cita">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="fecha" Type="date" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="200" />
+          <Property Name="status" Type="bit" Nullable="false" />
+          <Property Name="ID_Paciente" Type="int" Nullable="false" />
+          <Property Name="ID_Medico" Type="int" Nullable="false" />
+          <Property Name="ID_Horario" Type="int" />
+        </EntityType>
+        <EntityType Name="Cuenta">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="username" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="password" Type="varchar" MaxLength="40" />
+          <Property Name="ID_TipoCuenta" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ExpFisica">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="estudios" Type="varchar" MaxLength="200" />
+          <Property Name="evolucion" Type="varchar" MaxLength="200" />
+          <Property Name="temperatura" Type="float" Nullable="false" />
+          <Property Name="frecCardiaca" Type="int" Nullable="false" />
+          <Property Name="frecRespiratoria" Type="int" Nullable="false" />
+          <Property Name="estatura" Type="float" Nullable="false" />
+          <Property Name="peso" Type="float" Nullable="false" />
+          <Property Name="perToraxIns" Type="float" />
+          <Property Name="perToraxExp" Type="float" />
+          <Property Name="perAbdomen" Type="float" />
+          <Property Name="presionSis" Type="float" Nullable="false" />
+          <Property Name="presionDias" Type="float" Nullable="false" />
+          <Property Name="ID_Cita" Type="int" Nullable="false" />
+          <Property Name="odontograma" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Horario">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID_Medico" Type="int" Nullable="false" />
+          <Property Name="dia" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="hora" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Interrogatorio">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="alimentacion" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="deporte" Type="bit" Nullable="false" />
+          <Property Name="drogas" Type="bit" Nullable="false" />
+          <Property Name="toma" Type="bit" Nullable="false" />
+          <Property Name="fuma" Type="bit" Nullable="false" />
+          <Property Name="enfMental" Type="bit" Nullable="false" />
+          <Property Name="enfRinon" Type="bit" Nullable="false" />
+          <Property Name="enfCorazon" Type="bit" Nullable="false" />
+          <Property Name="cancer" Type="bit" Nullable="false" />
+          <Property Name="diabetes" Type="bit" Nullable="false" />
+          <Property Name="enfCerVas" Type="bit" Nullable="false" />
+          <Property Name="ID_Paciente" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MedicamentoReceta">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="medicamento" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="dosis" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="horario" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="ID_Receta" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Medico">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID_Cuenta" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="apellidoMaterno" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="apellidoPaterno" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="fechaNacimiento" Type="date" Nullable="false" />
+          <Property Name="sexo" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="telefono" Type="char" Nullable="false" MaxLength="10" />
+          <Property Name="especialidad" Type="varchar" Nullable="false" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="MedicoSecretario">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID_Medico" Type="int" Nullable="false" />
+          <Property Name="ID_Secretario" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Paciente">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID_Cuenta" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="apellidoMaterno" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="apellidoPaterno" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="tipoSangre" Type="varchar" Nullable="false" MaxLength="4" />
+          <Property Name="fechaNacimiento" Type="date" Nullable="false" />
+          <Property Name="sexo" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="telefono" Type="char" Nullable="false" MaxLength="10" />
+          <Property Name="direccion" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="ID_Medico" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Receta">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID_Paciente" Type="int" Nullable="false" />
+          <Property Name="ID_Medico" Type="int" Nullable="false" />
+          <Property Name="status" Type="bit" Nullable="false" />
+          <Property Name="recomendaciones" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Secretario">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID_Cuenta" Type="int" Nullable="false" />
+          <Property Name="apellidoPaterno" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="apellidoMaterno" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="fechaNacimiento" Type="date" />
+          <Property Name="telefono" Type="char" MaxLength="10" />
+          <Property Name="turno" Type="varchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="TipoCuenta">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Vacuna">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="VacunaPaciente">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID_Paciente" Type="int" Nullable="false" />
+          <Property Name="ID_Vacuna" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Cita__ID_Horario__5224328E">
+          <End Role="Horario" Type="consulmedicoModel.Store.Horario" Multiplicity="0..1" />
+          <End Role="Cita" Type="consulmedicoModel.Store.Cita" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Cita">
+              <PropertyRef Name="ID_Horario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cita__ID_Medico__531856C7">
+          <End Role="Medico" Type="consulmedicoModel.Store.Medico" Multiplicity="1" />
+          <End Role="Cita" Type="consulmedicoModel.Store.Cita" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medico">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Cita">
+              <PropertyRef Name="ID_Medico" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cita__ID_Pacient__540C7B00">
+          <End Role="Paciente" Type="consulmedicoModel.Store.Paciente" Multiplicity="1" />
+          <End Role="Cita" Type="consulmedicoModel.Store.Cita" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Paciente">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Cita">
+              <PropertyRef Name="ID_Paciente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cuenta__ID_TipoC__55009F39">
+          <End Role="TipoCuenta" Type="consulmedicoModel.Store.TipoCuenta" Multiplicity="1" />
+          <End Role="Cuenta" Type="consulmedicoModel.Store.Cuenta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoCuenta">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Cuenta">
+              <PropertyRef Name="ID_TipoCuenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ExpFisica__ID_Ci__55F4C372">
+          <End Role="Cita" Type="consulmedicoModel.Store.Cita" Multiplicity="1" />
+          <End Role="ExpFisica" Type="consulmedicoModel.Store.ExpFisica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cita">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ExpFisica">
+              <PropertyRef Name="ID_Cita" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Horario__ID_Medi__56E8E7AB">
+          <End Role="Medico" Type="consulmedicoModel.Store.Medico" Multiplicity="1" />
+          <End Role="Horario" Type="consulmedicoModel.Store.Horario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medico">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Horario">
+              <PropertyRef Name="ID_Medico" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Interroga__ID_Pa__57DD0BE4">
+          <End Role="Paciente" Type="consulmedicoModel.Store.Paciente" Multiplicity="1" />
+          <End Role="Interrogatorio" Type="consulmedicoModel.Store.Interrogatorio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Paciente">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Interrogatorio">
+              <PropertyRef Name="ID_Paciente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Medicamen__ID_Re__58D1301D">
+          <End Role="Receta" Type="consulmedicoModel.Store.Receta" Multiplicity="1" />
+          <End Role="MedicamentoReceta" Type="consulmedicoModel.Store.MedicamentoReceta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Receta">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MedicamentoReceta">
+              <PropertyRef Name="ID_Receta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Medico__ID_Cuent__59C55456">
+          <End Role="Cuenta" Type="consulmedicoModel.Store.Cuenta" Multiplicity="1" />
+          <End Role="Medico" Type="consulmedicoModel.Store.Medico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cuenta">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Medico">
+              <PropertyRef Name="ID_Cuenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MedicoSec__ID_Me__5AB9788F">
+          <End Role="Medico" Type="consulmedicoModel.Store.Medico" Multiplicity="1" />
+          <End Role="MedicoSecretario" Type="consulmedicoModel.Store.MedicoSecretario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medico">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MedicoSecretario">
+              <PropertyRef Name="ID_Medico" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MedicoSec__ID_Se__5BAD9CC8">
+          <End Role="Secretario" Type="consulmedicoModel.Store.Secretario" Multiplicity="1" />
+          <End Role="MedicoSecretario" Type="consulmedicoModel.Store.MedicoSecretario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Secretario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MedicoSecretario">
+              <PropertyRef Name="ID_Secretario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Paciente__ID_Cue__5CA1C101">
+          <End Role="Cuenta" Type="consulmedicoModel.Store.Cuenta" Multiplicity="1" />
+          <End Role="Paciente" Type="consulmedicoModel.Store.Paciente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cuenta">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Paciente">
+              <PropertyRef Name="ID_Cuenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Paciente__ID_Med__5D95E53A">
+          <End Role="Medico" Type="consulmedicoModel.Store.Medico" Multiplicity="1" />
+          <End Role="Paciente" Type="consulmedicoModel.Store.Paciente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medico">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Paciente">
+              <PropertyRef Name="ID_Medico" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Receta__ID_Medic__5E8A0973">
+          <End Role="Medico" Type="consulmedicoModel.Store.Medico" Multiplicity="1" />
+          <End Role="Receta" Type="consulmedicoModel.Store.Receta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medico">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Receta">
+              <PropertyRef Name="ID_Medico" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Receta__ID_Pacie__5F7E2DAC">
+          <End Role="Paciente" Type="consulmedicoModel.Store.Paciente" Multiplicity="1" />
+          <End Role="Receta" Type="consulmedicoModel.Store.Receta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Paciente">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Receta">
+              <PropertyRef Name="ID_Paciente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Secretari__ID_Cu__607251E5">
+          <End Role="Cuenta" Type="consulmedicoModel.Store.Cuenta" Multiplicity="1" />
+          <End Role="Secretario" Type="consulmedicoModel.Store.Secretario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cuenta">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Secretario">
+              <PropertyRef Name="ID_Cuenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__VacunaPac__ID_Pa__6166761E">
+          <End Role="Paciente" Type="consulmedicoModel.Store.Paciente" Multiplicity="1" />
+          <End Role="VacunaPaciente" Type="consulmedicoModel.Store.VacunaPaciente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Paciente">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VacunaPaciente">
+              <PropertyRef Name="ID_Paciente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__VacunaPac__ID_Va__625A9A57">
+          <End Role="Vacuna" Type="consulmedicoModel.Store.Vacuna" Multiplicity="1" />
+          <End Role="VacunaPaciente" Type="consulmedicoModel.Store.VacunaPaciente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vacuna">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VacunaPaciente">
+              <PropertyRef Name="ID_Vacuna" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="consulmedicoModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="consulmedicoEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Cita" EntityType="consulmedicoModel.Cita" />
+          <EntitySet Name="Cuenta" EntityType="consulmedicoModel.Cuenta" />
+          <EntitySet Name="ExpFisica" EntityType="consulmedicoModel.ExpFisica" />
+          <EntitySet Name="Horario" EntityType="consulmedicoModel.Horario" />
+          <EntitySet Name="Interrogatorio" EntityType="consulmedicoModel.Interrogatorio" />
+          <EntitySet Name="MedicamentoReceta" EntityType="consulmedicoModel.MedicamentoReceta" />
+          <EntitySet Name="Medico" EntityType="consulmedicoModel.Medico" />
+          <EntitySet Name="MedicoSecretario" EntityType="consulmedicoModel.MedicoSecretario" />
+          <EntitySet Name="Paciente" EntityType="consulmedicoModel.Paciente" />
+          <EntitySet Name="Receta" EntityType="consulmedicoModel.Receta" />
+          <EntitySet Name="Secretario" EntityType="consulmedicoModel.Secretario" />
+          <EntitySet Name="TipoCuenta" EntityType="consulmedicoModel.TipoCuenta" />
+          <EntitySet Name="Vacuna" EntityType="consulmedicoModel.Vacuna" />
+          <EntitySet Name="VacunaPaciente" EntityType="consulmedicoModel.VacunaPaciente" />
+          <AssociationSet Name="FK__Cita__ID_Horario__5224328E" Association="consulmedicoModel.FK__Cita__ID_Horario__5224328E">
+            <End Role="Horario" EntitySet="Horario" />
+            <End Role="Cita" EntitySet="Cita" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cita__ID_Medico__531856C7" Association="consulmedicoModel.FK__Cita__ID_Medico__531856C7">
+            <End Role="Medico" EntitySet="Medico" />
+            <End Role="Cita" EntitySet="Cita" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cita__ID_Pacient__540C7B00" Association="consulmedicoModel.FK__Cita__ID_Pacient__540C7B00">
+            <End Role="Paciente" EntitySet="Paciente" />
+            <End Role="Cita" EntitySet="Cita" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ExpFisica__ID_Ci__55F4C372" Association="consulmedicoModel.FK__ExpFisica__ID_Ci__55F4C372">
+            <End Role="Cita" EntitySet="Cita" />
+            <End Role="ExpFisica" EntitySet="ExpFisica" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cuenta__ID_TipoC__55009F39" Association="consulmedicoModel.FK__Cuenta__ID_TipoC__55009F39">
+            <End Role="TipoCuenta" EntitySet="TipoCuenta" />
+            <End Role="Cuenta" EntitySet="Cuenta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Medico__ID_Cuent__59C55456" Association="consulmedicoModel.FK__Medico__ID_Cuent__59C55456">
+            <End Role="Cuenta" EntitySet="Cuenta" />
+            <End Role="Medico" EntitySet="Medico" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Paciente__ID_Cue__5CA1C101" Association="consulmedicoModel.FK__Paciente__ID_Cue__5CA1C101">
+            <End Role="Cuenta" EntitySet="Cuenta" />
+            <End Role="Paciente" EntitySet="Paciente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Secretari__ID_Cu__607251E5" Association="consulmedicoModel.FK__Secretari__ID_Cu__607251E5">
+            <End Role="Cuenta" EntitySet="Cuenta" />
+            <End Role="Secretario" EntitySet="Secretario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Horario__ID_Medi__56E8E7AB" Association="consulmedicoModel.FK__Horario__ID_Medi__56E8E7AB">
+            <End Role="Medico" EntitySet="Medico" />
+            <End Role="Horario" EntitySet="Horario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Interroga__ID_Pa__57DD0BE4" Association="consulmedicoModel.FK__Interroga__ID_Pa__57DD0BE4">
+            <End Role="Paciente" EntitySet="Paciente" />
+            <End Role="Interrogatorio" EntitySet="Interrogatorio" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Medicamen__ID_Re__58D1301D" Association="consulmedicoModel.FK__Medicamen__ID_Re__58D1301D">
+            <End Role="Receta" EntitySet="Receta" />
+            <End Role="MedicamentoReceta" EntitySet="MedicamentoReceta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MedicoSec__ID_Me__5AB9788F" Association="consulmedicoModel.FK__MedicoSec__ID_Me__5AB9788F">
+            <End Role="Medico" EntitySet="Medico" />
+            <End Role="MedicoSecretario" EntitySet="MedicoSecretario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Paciente__ID_Med__5D95E53A" Association="consulmedicoModel.FK__Paciente__ID_Med__5D95E53A">
+            <End Role="Medico" EntitySet="Medico" />
+            <End Role="Paciente" EntitySet="Paciente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Receta__ID_Medic__5E8A0973" Association="consulmedicoModel.FK__Receta__ID_Medic__5E8A0973">
+            <End Role="Medico" EntitySet="Medico" />
+            <End Role="Receta" EntitySet="Receta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MedicoSec__ID_Se__5BAD9CC8" Association="consulmedicoModel.FK__MedicoSec__ID_Se__5BAD9CC8">
+            <End Role="Secretario" EntitySet="Secretario" />
+            <End Role="MedicoSecretario" EntitySet="MedicoSecretario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Receta__ID_Pacie__5F7E2DAC" Association="consulmedicoModel.FK__Receta__ID_Pacie__5F7E2DAC">
+            <End Role="Paciente" EntitySet="Paciente" />
+            <End Role="Receta" EntitySet="Receta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VacunaPac__ID_Pa__6166761E" Association="consulmedicoModel.FK__VacunaPac__ID_Pa__6166761E">
+            <End Role="Paciente" EntitySet="Paciente" />
+            <End Role="VacunaPaciente" EntitySet="VacunaPaciente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VacunaPac__ID_Va__625A9A57" Association="consulmedicoModel.FK__VacunaPac__ID_Va__625A9A57">
+            <End Role="Vacuna" EntitySet="Vacuna" />
+            <End Role="VacunaPaciente" EntitySet="VacunaPaciente" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Cita">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="descripcion" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
+          <Property Name="ID_Paciente" Type="Int32" Nullable="false" />
+          <Property Name="ID_Medico" Type="Int32" Nullable="false" />
+          <Property Name="ID_Horario" Type="Int32" />
+          <NavigationProperty Name="Horario" Relationship="consulmedicoModel.FK__Cita__ID_Horario__5224328E" FromRole="Cita" ToRole="Horario" />
+          <NavigationProperty Name="Medico" Relationship="consulmedicoModel.FK__Cita__ID_Medico__531856C7" FromRole="Cita" ToRole="Medico" />
+          <NavigationProperty Name="Paciente" Relationship="consulmedicoModel.FK__Cita__ID_Pacient__540C7B00" FromRole="Cita" ToRole="Paciente" />
+          <NavigationProperty Name="ExpFisica" Relationship="consulmedicoModel.FK__ExpFisica__ID_Ci__55F4C372" FromRole="Cita" ToRole="ExpFisica" />
+        </EntityType>
+        <EntityType Name="Cuenta">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="username" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="password" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="ID_TipoCuenta" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TipoCuenta" Relationship="consulmedicoModel.FK__Cuenta__ID_TipoC__55009F39" FromRole="Cuenta" ToRole="TipoCuenta" />
+          <NavigationProperty Name="Medico" Relationship="consulmedicoModel.FK__Medico__ID_Cuent__59C55456" FromRole="Cuenta" ToRole="Medico" />
+          <NavigationProperty Name="Paciente" Relationship="consulmedicoModel.FK__Paciente__ID_Cue__5CA1C101" FromRole="Cuenta" ToRole="Paciente" />
+          <NavigationProperty Name="Secretario" Relationship="consulmedicoModel.FK__Secretari__ID_Cu__607251E5" FromRole="Cuenta" ToRole="Secretario" />
+        </EntityType>
+        <EntityType Name="ExpFisica">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="estudios" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="evolucion" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="temperatura" Type="Double" Nullable="false" />
+          <Property Name="frecCardiaca" Type="Int32" Nullable="false" />
+          <Property Name="frecRespiratoria" Type="Int32" Nullable="false" />
+          <Property Name="estatura" Type="Double" Nullable="false" />
+          <Property Name="peso" Type="Double" Nullable="false" />
+          <Property Name="perToraxIns" Type="Double" />
+          <Property Name="perToraxExp" Type="Double" />
+          <Property Name="perAbdomen" Type="Double" />
+          <Property Name="presionSis" Type="Double" Nullable="false" />
+          <Property Name="presionDias" Type="Double" Nullable="false" />
+          <Property Name="ID_Cita" Type="Int32" Nullable="false" />
+          <Property Name="odontograma" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Cita" Relationship="consulmedicoModel.FK__ExpFisica__ID_Ci__55F4C372" FromRole="ExpFisica" ToRole="Cita" />
+        </EntityType>
+        <EntityType Name="Horario">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ID_Medico" Type="Int32" Nullable="false" />
+          <Property Name="dia" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="hora" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Cita" Relationship="consulmedicoModel.FK__Cita__ID_Horario__5224328E" FromRole="Horario" ToRole="Cita" />
+          <NavigationProperty Name="Medico" Relationship="consulmedicoModel.FK__Horario__ID_Medi__56E8E7AB" FromRole="Horario" ToRole="Medico" />
+        </EntityType>
+        <EntityType Name="Interrogatorio">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="alimentacion" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="deporte" Type="Boolean" Nullable="false" />
+          <Property Name="drogas" Type="Boolean" Nullable="false" />
+          <Property Name="toma" Type="Boolean" Nullable="false" />
+          <Property Name="fuma" Type="Boolean" Nullable="false" />
+          <Property Name="enfMental" Type="Boolean" Nullable="false" />
+          <Property Name="enfRinon" Type="Boolean" Nullable="false" />
+          <Property Name="enfCorazon" Type="Boolean" Nullable="false" />
+          <Property Name="cancer" Type="Boolean" Nullable="false" />
+          <Property Name="diabetes" Type="Boolean" Nullable="false" />
+          <Property Name="enfCerVas" Type="Boolean" Nullable="false" />
+          <Property Name="ID_Paciente" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Paciente" Relationship="consulmedicoModel.FK__Interroga__ID_Pa__57DD0BE4" FromRole="Interrogatorio" ToRole="Paciente" />
+        </EntityType>
+        <EntityType Name="MedicamentoReceta">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="medicamento" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="dosis" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="horario" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="ID_Receta" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Receta" Relationship="consulmedicoModel.FK__Medicamen__ID_Re__58D1301D" FromRole="MedicamentoReceta" ToRole="Receta" />
+        </EntityType>
+        <EntityType Name="Medico">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ID_Cuenta" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="apellidoMaterno" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="apellidoPaterno" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="fechaNacimiento" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="sexo" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="telefono" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="especialidad" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Cita" Relationship="consulmedicoModel.FK__Cita__ID_Medico__531856C7" FromRole="Medico" ToRole="Cita" />
+          <NavigationProperty Name="Cuenta" Relationship="consulmedicoModel.FK__Medico__ID_Cuent__59C55456" FromRole="Medico" ToRole="Cuenta" />
+          <NavigationProperty Name="Horario" Relationship="consulmedicoModel.FK__Horario__ID_Medi__56E8E7AB" FromRole="Medico" ToRole="Horario" />
+          <NavigationProperty Name="MedicoSecretario" Relationship="consulmedicoModel.FK__MedicoSec__ID_Me__5AB9788F" FromRole="Medico" ToRole="MedicoSecretario" />
+          <NavigationProperty Name="Paciente" Relationship="consulmedicoModel.FK__Paciente__ID_Med__5D95E53A" FromRole="Medico" ToRole="Paciente" />
+          <NavigationProperty Name="Receta" Relationship="consulmedicoModel.FK__Receta__ID_Medic__5E8A0973" FromRole="Medico" ToRole="Receta" />
+        </EntityType>
+        <EntityType Name="MedicoSecretario">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ID_Medico" Type="Int32" Nullable="false" />
+          <Property Name="ID_Secretario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Medico" Relationship="consulmedicoModel.FK__MedicoSec__ID_Me__5AB9788F" FromRole="MedicoSecretario" ToRole="Medico" />
+          <NavigationProperty Name="Secretario" Relationship="consulmedicoModel.FK__MedicoSec__ID_Se__5BAD9CC8" FromRole="MedicoSecretario" ToRole="Secretario" />
+        </EntityType>
+        <EntityType Name="Paciente">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ID_Cuenta" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="apellidoMaterno" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="apellidoPaterno" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="tipoSangre" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="fechaNacimiento" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="sexo" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="telefono" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="direccion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ID_Medico" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Cita" Relationship="consulmedicoModel.FK__Cita__ID_Pacient__540C7B00" FromRole="Paciente" ToRole="Cita" />
+          <NavigationProperty Name="Cuenta" Relationship="consulmedicoModel.FK__Paciente__ID_Cue__5CA1C101" FromRole="Paciente" ToRole="Cuenta" />
+          <NavigationProperty Name="Interrogatorio" Relationship="consulmedicoModel.FK__Interroga__ID_Pa__57DD0BE4" FromRole="Paciente" ToRole="Interrogatorio" />
+          <NavigationProperty Name="Medico" Relationship="consulmedicoModel.FK__Paciente__ID_Med__5D95E53A" FromRole="Paciente" ToRole="Medico" />
+          <NavigationProperty Name="Receta" Relationship="consulmedicoModel.FK__Receta__ID_Pacie__5F7E2DAC" FromRole="Paciente" ToRole="Receta" />
+          <NavigationProperty Name="VacunaPaciente" Relationship="consulmedicoModel.FK__VacunaPac__ID_Pa__6166761E" FromRole="Paciente" ToRole="VacunaPaciente" />
+        </EntityType>
+        <EntityType Name="Receta">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ID_Paciente" Type="Int32" Nullable="false" />
+          <Property Name="ID_Medico" Type="Int32" Nullable="false" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
+          <Property Name="recomendaciones" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="MedicamentoReceta" Relationship="consulmedicoModel.FK__Medicamen__ID_Re__58D1301D" FromRole="Receta" ToRole="MedicamentoReceta" />
+          <NavigationProperty Name="Medico" Relationship="consulmedicoModel.FK__Receta__ID_Medic__5E8A0973" FromRole="Receta" ToRole="Medico" />
+          <NavigationProperty Name="Paciente" Relationship="consulmedicoModel.FK__Receta__ID_Pacie__5F7E2DAC" FromRole="Receta" ToRole="Paciente" />
+        </EntityType>
+        <EntityType Name="Secretario">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ID_Cuenta" Type="Int32" Nullable="false" />
+          <Property Name="apellidoPaterno" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="apellidoMaterno" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="fechaNacimiento" Type="DateTime" Precision="0" />
+          <Property Name="telefono" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="turno" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Cuenta" Relationship="consulmedicoModel.FK__Secretari__ID_Cu__607251E5" FromRole="Secretario" ToRole="Cuenta" />
+          <NavigationProperty Name="MedicoSecretario" Relationship="consulmedicoModel.FK__MedicoSec__ID_Se__5BAD9CC8" FromRole="Secretario" ToRole="MedicoSecretario" />
+        </EntityType>
+        <EntityType Name="TipoCuenta">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Cuenta" Relationship="consulmedicoModel.FK__Cuenta__ID_TipoC__55009F39" FromRole="TipoCuenta" ToRole="Cuenta" />
+        </EntityType>
+        <EntityType Name="Vacuna">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="VacunaPaciente" Relationship="consulmedicoModel.FK__VacunaPac__ID_Va__625A9A57" FromRole="Vacuna" ToRole="VacunaPaciente" />
+        </EntityType>
+        <EntityType Name="VacunaPaciente">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ID_Paciente" Type="Int32" Nullable="false" />
+          <Property Name="ID_Vacuna" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Paciente" Relationship="consulmedicoModel.FK__VacunaPac__ID_Pa__6166761E" FromRole="VacunaPaciente" ToRole="Paciente" />
+          <NavigationProperty Name="Vacuna" Relationship="consulmedicoModel.FK__VacunaPac__ID_Va__625A9A57" FromRole="VacunaPaciente" ToRole="Vacuna" />
+        </EntityType>
+        <Association Name="FK__Cita__ID_Horario__5224328E">
+          <End Role="Horario" Type="consulmedicoModel.Horario" Multiplicity="0..1" />
+          <End Role="Cita" Type="consulmedicoModel.Cita" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Cita">
+              <PropertyRef Name="ID_Horario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cita__ID_Medico__531856C7">
+          <End Role="Medico" Type="consulmedicoModel.Medico" Multiplicity="1" />
+          <End Role="Cita" Type="consulmedicoModel.Cita" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medico">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Cita">
+              <PropertyRef Name="ID_Medico" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cita__ID_Pacient__540C7B00">
+          <End Role="Paciente" Type="consulmedicoModel.Paciente" Multiplicity="1" />
+          <End Role="Cita" Type="consulmedicoModel.Cita" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Paciente">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Cita">
+              <PropertyRef Name="ID_Paciente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ExpFisica__ID_Ci__55F4C372">
+          <End Role="Cita" Type="consulmedicoModel.Cita" Multiplicity="1" />
+          <End Role="ExpFisica" Type="consulmedicoModel.ExpFisica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cita">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ExpFisica">
+              <PropertyRef Name="ID_Cita" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cuenta__ID_TipoC__55009F39">
+          <End Role="TipoCuenta" Type="consulmedicoModel.TipoCuenta" Multiplicity="1" />
+          <End Role="Cuenta" Type="consulmedicoModel.Cuenta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoCuenta">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Cuenta">
+              <PropertyRef Name="ID_TipoCuenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Medico__ID_Cuent__59C55456">
+          <End Role="Cuenta" Type="consulmedicoModel.Cuenta" Multiplicity="1" />
+          <End Role="Medico" Type="consulmedicoModel.Medico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cuenta">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Medico">
+              <PropertyRef Name="ID_Cuenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Paciente__ID_Cue__5CA1C101">
+          <End Role="Cuenta" Type="consulmedicoModel.Cuenta" Multiplicity="1" />
+          <End Role="Paciente" Type="consulmedicoModel.Paciente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cuenta">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Paciente">
+              <PropertyRef Name="ID_Cuenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Secretari__ID_Cu__607251E5">
+          <End Role="Cuenta" Type="consulmedicoModel.Cuenta" Multiplicity="1" />
+          <End Role="Secretario" Type="consulmedicoModel.Secretario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cuenta">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Secretario">
+              <PropertyRef Name="ID_Cuenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Horario__ID_Medi__56E8E7AB">
+          <End Role="Medico" Type="consulmedicoModel.Medico" Multiplicity="1" />
+          <End Role="Horario" Type="consulmedicoModel.Horario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medico">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Horario">
+              <PropertyRef Name="ID_Medico" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Interroga__ID_Pa__57DD0BE4">
+          <End Role="Paciente" Type="consulmedicoModel.Paciente" Multiplicity="1" />
+          <End Role="Interrogatorio" Type="consulmedicoModel.Interrogatorio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Paciente">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Interrogatorio">
+              <PropertyRef Name="ID_Paciente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Medicamen__ID_Re__58D1301D">
+          <End Role="Receta" Type="consulmedicoModel.Receta" Multiplicity="1" />
+          <End Role="MedicamentoReceta" Type="consulmedicoModel.MedicamentoReceta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Receta">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MedicamentoReceta">
+              <PropertyRef Name="ID_Receta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MedicoSec__ID_Me__5AB9788F">
+          <End Role="Medico" Type="consulmedicoModel.Medico" Multiplicity="1" />
+          <End Role="MedicoSecretario" Type="consulmedicoModel.MedicoSecretario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medico">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MedicoSecretario">
+              <PropertyRef Name="ID_Medico" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Paciente__ID_Med__5D95E53A">
+          <End Role="Medico" Type="consulmedicoModel.Medico" Multiplicity="1" />
+          <End Role="Paciente" Type="consulmedicoModel.Paciente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medico">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Paciente">
+              <PropertyRef Name="ID_Medico" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Receta__ID_Medic__5E8A0973">
+          <End Role="Medico" Type="consulmedicoModel.Medico" Multiplicity="1" />
+          <End Role="Receta" Type="consulmedicoModel.Receta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medico">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Receta">
+              <PropertyRef Name="ID_Medico" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MedicoSec__ID_Se__5BAD9CC8">
+          <End Role="Secretario" Type="consulmedicoModel.Secretario" Multiplicity="1" />
+          <End Role="MedicoSecretario" Type="consulmedicoModel.MedicoSecretario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Secretario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MedicoSecretario">
+              <PropertyRef Name="ID_Secretario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Receta__ID_Pacie__5F7E2DAC">
+          <End Role="Paciente" Type="consulmedicoModel.Paciente" Multiplicity="1" />
+          <End Role="Receta" Type="consulmedicoModel.Receta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Paciente">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Receta">
+              <PropertyRef Name="ID_Paciente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__VacunaPac__ID_Pa__6166761E">
+          <End Role="Paciente" Type="consulmedicoModel.Paciente" Multiplicity="1" />
+          <End Role="VacunaPaciente" Type="consulmedicoModel.VacunaPaciente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Paciente">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VacunaPaciente">
+              <PropertyRef Name="ID_Paciente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__VacunaPac__ID_Va__625A9A57">
+          <End Role="Vacuna" Type="consulmedicoModel.Vacuna" Multiplicity="1" />
+          <End Role="VacunaPaciente" Type="consulmedicoModel.VacunaPaciente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vacuna">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VacunaPaciente">
+              <PropertyRef Name="ID_Vacuna" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="consulmedicoModelStoreContainer" CdmEntityContainer="consulmedicoEntities">
+          <EntitySetMapping Name="Cita">
+            <EntityTypeMapping TypeName="consulmedicoModel.Cita">
+              <MappingFragment StoreEntitySet="Cita">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="ID_Paciente" ColumnName="ID_Paciente" />
+                <ScalarProperty Name="ID_Medico" ColumnName="ID_Medico" />
+                <ScalarProperty Name="ID_Horario" ColumnName="ID_Horario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cuenta">
+            <EntityTypeMapping TypeName="consulmedicoModel.Cuenta">
+              <MappingFragment StoreEntitySet="Cuenta">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="ID_TipoCuenta" ColumnName="ID_TipoCuenta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ExpFisica">
+            <EntityTypeMapping TypeName="consulmedicoModel.ExpFisica">
+              <MappingFragment StoreEntitySet="ExpFisica">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="estudios" ColumnName="estudios" />
+                <ScalarProperty Name="evolucion" ColumnName="evolucion" />
+                <ScalarProperty Name="temperatura" ColumnName="temperatura" />
+                <ScalarProperty Name="frecCardiaca" ColumnName="frecCardiaca" />
+                <ScalarProperty Name="frecRespiratoria" ColumnName="frecRespiratoria" />
+                <ScalarProperty Name="estatura" ColumnName="estatura" />
+                <ScalarProperty Name="peso" ColumnName="peso" />
+                <ScalarProperty Name="perToraxIns" ColumnName="perToraxIns" />
+                <ScalarProperty Name="perToraxExp" ColumnName="perToraxExp" />
+                <ScalarProperty Name="perAbdomen" ColumnName="perAbdomen" />
+                <ScalarProperty Name="presionSis" ColumnName="presionSis" />
+                <ScalarProperty Name="presionDias" ColumnName="presionDias" />
+                <ScalarProperty Name="ID_Cita" ColumnName="ID_Cita" />
+                <ScalarProperty Name="odontograma" ColumnName="odontograma" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Horario">
+            <EntityTypeMapping TypeName="consulmedicoModel.Horario">
+              <MappingFragment StoreEntitySet="Horario">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_Medico" ColumnName="ID_Medico" />
+                <ScalarProperty Name="dia" ColumnName="dia" />
+                <ScalarProperty Name="hora" ColumnName="hora" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Interrogatorio">
+            <EntityTypeMapping TypeName="consulmedicoModel.Interrogatorio">
+              <MappingFragment StoreEntitySet="Interrogatorio">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="alimentacion" ColumnName="alimentacion" />
+                <ScalarProperty Name="deporte" ColumnName="deporte" />
+                <ScalarProperty Name="drogas" ColumnName="drogas" />
+                <ScalarProperty Name="toma" ColumnName="toma" />
+                <ScalarProperty Name="fuma" ColumnName="fuma" />
+                <ScalarProperty Name="enfMental" ColumnName="enfMental" />
+                <ScalarProperty Name="enfRinon" ColumnName="enfRinon" />
+                <ScalarProperty Name="enfCorazon" ColumnName="enfCorazon" />
+                <ScalarProperty Name="cancer" ColumnName="cancer" />
+                <ScalarProperty Name="diabetes" ColumnName="diabetes" />
+                <ScalarProperty Name="enfCerVas" ColumnName="enfCerVas" />
+                <ScalarProperty Name="ID_Paciente" ColumnName="ID_Paciente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MedicamentoReceta">
+            <EntityTypeMapping TypeName="consulmedicoModel.MedicamentoReceta">
+              <MappingFragment StoreEntitySet="MedicamentoReceta">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="medicamento" ColumnName="medicamento" />
+                <ScalarProperty Name="dosis" ColumnName="dosis" />
+                <ScalarProperty Name="horario" ColumnName="horario" />
+                <ScalarProperty Name="ID_Receta" ColumnName="ID_Receta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Medico">
+            <EntityTypeMapping TypeName="consulmedicoModel.Medico">
+              <MappingFragment StoreEntitySet="Medico">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_Cuenta" ColumnName="ID_Cuenta" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apellidoMaterno" ColumnName="apellidoMaterno" />
+                <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
+                <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+                <ScalarProperty Name="sexo" ColumnName="sexo" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="especialidad" ColumnName="especialidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MedicoSecretario">
+            <EntityTypeMapping TypeName="consulmedicoModel.MedicoSecretario">
+              <MappingFragment StoreEntitySet="MedicoSecretario">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_Medico" ColumnName="ID_Medico" />
+                <ScalarProperty Name="ID_Secretario" ColumnName="ID_Secretario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Paciente">
+            <EntityTypeMapping TypeName="consulmedicoModel.Paciente">
+              <MappingFragment StoreEntitySet="Paciente">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_Cuenta" ColumnName="ID_Cuenta" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apellidoMaterno" ColumnName="apellidoMaterno" />
+                <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
+                <ScalarProperty Name="tipoSangre" ColumnName="tipoSangre" />
+                <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+                <ScalarProperty Name="sexo" ColumnName="sexo" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="ID_Medico" ColumnName="ID_Medico" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Receta">
+            <EntityTypeMapping TypeName="consulmedicoModel.Receta">
+              <MappingFragment StoreEntitySet="Receta">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_Paciente" ColumnName="ID_Paciente" />
+                <ScalarProperty Name="ID_Medico" ColumnName="ID_Medico" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="recomendaciones" ColumnName="recomendaciones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Secretario">
+            <EntityTypeMapping TypeName="consulmedicoModel.Secretario">
+              <MappingFragment StoreEntitySet="Secretario">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_Cuenta" ColumnName="ID_Cuenta" />
+                <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
+                <ScalarProperty Name="apellidoMaterno" ColumnName="apellidoMaterno" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="turno" ColumnName="turno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoCuenta">
+            <EntityTypeMapping TypeName="consulmedicoModel.TipoCuenta">
+              <MappingFragment StoreEntitySet="TipoCuenta">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vacuna">
+            <EntityTypeMapping TypeName="consulmedicoModel.Vacuna">
+              <MappingFragment StoreEntitySet="Vacuna">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VacunaPaciente">
+            <EntityTypeMapping TypeName="consulmedicoModel.VacunaPaciente">
+              <MappingFragment StoreEntitySet="VacunaPaciente">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_Paciente" ColumnName="ID_Paciente" />
+                <ScalarProperty Name="ID_Vacuna" ColumnName="ID_Vacuna" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

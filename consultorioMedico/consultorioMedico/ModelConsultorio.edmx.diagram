@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4bcdaf9dbce44094b852afe840664fe1" Name="Diagram1">
+        <EntityTypeShape EntityType="consulmedicoModel.Cita" Width="1.5" PointX="9.75" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="consulmedicoModel.Cuenta" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="consulmedicoModel.ExpFisica" Width="1.5" PointX="12" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="consulmedicoModel.Horario" Width="1.5" PointX="7.5" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="consulmedicoModel.Interrogatorio" Width="1.5" PointX="9.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="consulmedicoModel.MedicamentoReceta" Width="1.5" PointX="15" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="consulmedicoModel.Medico" Width="1.5" PointX="5.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="consulmedicoModel.MedicoSecretario" Width="1.5" PointX="7.5" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="consulmedicoModel.Paciente" Width="1.5" PointX="7.5" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="consulmedicoModel.Receta" Width="1.5" PointX="12.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="consulmedicoModel.Secretario" Width="1.5" PointX="5.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="consulmedicoModel.TipoCuenta" Width="1.5" PointX="0.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="consulmedicoModel.Vacuna" Width="1.5" PointX="10.5" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="consulmedicoModel.VacunaPaciente" Width="1.5" PointX="12.75" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="consulmedicoModel.FK__Cita__ID_Horario__5224328E" ManuallyRouted="false" />
+        <AssociationConnector Association="consulmedicoModel.FK__Cita__ID_Medico__531856C7" ManuallyRouted="false" />
+        <AssociationConnector Association="consulmedicoModel.FK__Cita__ID_Pacient__540C7B00" ManuallyRouted="false" />
+        <AssociationConnector Association="consulmedicoModel.FK__ExpFisica__ID_Ci__55F4C372" ManuallyRouted="false" />
+        <AssociationConnector Association="consulmedicoModel.FK__Cuenta__ID_TipoC__55009F39" ManuallyRouted="false" />
+        <AssociationConnector Association="consulmedicoModel.FK__Medico__ID_Cuent__59C55456" ManuallyRouted="false" />
+        <AssociationConnector Association="consulmedicoModel.FK__Paciente__ID_Cue__5CA1C101" ManuallyRouted="false" />
+        <AssociationConnector Association="consulmedicoModel.FK__Secretari__ID_Cu__607251E5" ManuallyRouted="false" />
+        <AssociationConnector Association="consulmedicoModel.FK__Horario__ID_Medi__56E8E7AB" ManuallyRouted="false" />
+        <AssociationConnector Association="consulmedicoModel.FK__Interroga__ID_Pa__57DD0BE4" ManuallyRouted="false" />
+        <AssociationConnector Association="consulmedicoModel.FK__Medicamen__ID_Re__58D1301D" ManuallyRouted="false" />
+        <AssociationConnector Association="consulmedicoModel.FK__MedicoSec__ID_Me__5AB9788F" ManuallyRouted="false" />
+        <AssociationConnector Association="consulmedicoModel.FK__Paciente__ID_Med__5D95E53A" ManuallyRouted="false" />
+        <AssociationConnector Association="consulmedicoModel.FK__Receta__ID_Medic__5E8A0973" ManuallyRouted="false" />
+        <AssociationConnector Association="consulmedicoModel.FK__MedicoSec__ID_Se__5BAD9CC8" ManuallyRouted="false" />
+        <AssociationConnector Association="consulmedicoModel.FK__Receta__ID_Pacie__5F7E2DAC" ManuallyRouted="false" />
+        <AssociationConnector Association="consulmedicoModel.FK__VacunaPac__ID_Pa__6166761E" ManuallyRouted="false" />
+        <AssociationConnector Association="consulmedicoModel.FK__VacunaPac__ID_Va__625A9A57" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="consulmedicoEntities-Web.config Connection String" description="consulmedicoEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/ModelConsultorio.csdl|res://*/ModelConsultorio.ssdl|res://*/ModelConsultorio.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=mssql4.gear.host;initial catalog=consulmedico;persist security info=True;user id=consulmedico;password=Ov9UivU?!0dG;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\kevinalan\\Documents\\Consultorio\\consultorioMedico\\consultorioMedico\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='consulmedicoEntities']/@connectionString" />
+  </parameter>
+</parameters>
