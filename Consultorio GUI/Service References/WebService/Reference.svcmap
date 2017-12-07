@@ -22,8 +22,8 @@
     <MetadataSource Address="http://consultorio.gear.host/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WebService.wsdl" MetadataType="Wsdl" ID="b3792aab-5c72-4631-9030-a4cd15e6c99a" SourceId="1" SourceUrl="http://consultorio.gear.host/WebService.asmx?wsdl" />
-    <MetadataFile FileName="WebService.disco" MetadataType="Disco" ID="2f74c7b1-adf1-4b95-8cc9-186b6bec5809" SourceId="1" SourceUrl="http://consultorio.gear.host/WebService.asmx?disco" />
+    <MetadataFile FileName="WebServiceConsultorio.wsdl" MetadataType="Wsdl" ID="360b0855-20be-4e2d-b698-fd8f21f12f2f" SourceId="1" SourceUrl="http://consultorio.gear.host/WebServiceConsultorio.asmx?wsdl" />
+    <MetadataFile FileName="WebServiceConsultorio.disco" MetadataType="Disco" ID="f64059c4-8366-4f2f-a7fd-c9497b49a9f3" SourceId="1" SourceUrl="http://consultorio.gear.host/WebServiceConsultorio.asmx?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

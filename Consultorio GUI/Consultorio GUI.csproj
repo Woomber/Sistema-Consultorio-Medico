@@ -136,40 +136,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.ArrayOfModeloCita.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.ArrayOfModeloExpFisica.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.ArrayOfModeloHorario.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.ArrayOfModeloInterrogatorio.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.ArrayOfModeloMedico.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.ArrayOfModeloMedicoPaciente.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.ArrayOfModeloMedicoSecretario.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.ArrayOfModeloPaciente.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.ArrayOfModeloPacienteVacuna.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.ArrayOfModeloReceta.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.ArrayOfModeloSecretario.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.ArrayOfModeloVacuna.datasource">
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.Cita.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\WebService\Consultorio_GUI.WebService.createCitaResponse.datasource">
@@ -178,10 +145,16 @@
     <None Include="Service References\WebService\Consultorio_GUI.WebService.createCuentaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.createExpFiscaResponse.datasource">
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.createExpFisicaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.createHorarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\WebService\Consultorio_GUI.WebService.createInterrogatorioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.createMedicamentoRecetaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\WebService\Consultorio_GUI.WebService.createMedicoResponse.datasource">
@@ -196,31 +169,40 @@
     <None Include="Service References\WebService\Consultorio_GUI.WebService.createSecretarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.createTipoCuentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\WebService\Consultorio_GUI.WebService.createVacunaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.HelloWorldResponse.datasource">
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.Cuenta.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.modeloCuenta.datasource">
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.ExpFisica.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.modeloMedico.datasource">
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.Horario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.readCitaMedicoResponse.datasource">
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.Interrogatorio.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.readCitaPacienteResponse.datasource">
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.MedicamentoReceta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.Medico.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.MedicoSecretario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.Paciente.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\WebService\Consultorio_GUI.WebService.readCitaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\WebService\Consultorio_GUI.WebService.readCuentaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.readCuentaUserResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\WebService\Consultorio_GUI.WebService.readExpFisicaResponse.datasource">
@@ -232,16 +214,7 @@
     <None Include="Service References\WebService\Consultorio_GUI.WebService.readInterrogatorioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.readMedicoByIDResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.readMedicoByNameResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.readMedicoPacienteByMedicoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.readMedicoPacienteByPacienteResponse.datasource">
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.readMedicamentoRecetaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\WebService\Consultorio_GUI.WebService.readMedicoResponse.datasource">
@@ -253,16 +226,28 @@
     <None Include="Service References\WebService\Consultorio_GUI.WebService.readPacienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.readPacienteVacunaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\WebService\Consultorio_GUI.WebService.readRecetaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WebService\Consultorio_GUI.WebService.readSecretarioResponse.datasource">
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.readSecreatrioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.readTipoCuentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.readVacunaPacienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\WebService\Consultorio_GUI.WebService.readVacunaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.Receta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.Secretario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.TipoCuenta.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\WebService\Consultorio_GUI.WebService.updateCitaResponse.datasource">
@@ -274,7 +259,13 @@
     <None Include="Service References\WebService\Consultorio_GUI.WebService.updateExpFisicaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.updateHorarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\WebService\Consultorio_GUI.WebService.updateInterrogatorioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.updateMedicamentoRecetaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\WebService\Consultorio_GUI.WebService.updateMedicoResponse.datasource">
@@ -289,10 +280,19 @@
     <None Include="Service References\WebService\Consultorio_GUI.WebService.updateSecretarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.updateTipoCuentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\WebService\Consultorio_GUI.WebService.updateVacunaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WebService\WebService.wsdl" />
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.Vacuna.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\Consultorio_GUI.WebService.VacunaPaciente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\WebServiceConsultorio.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -302,9 +302,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\WebService\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\WebService\WebService.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\WebService\configuration91.svcinfo" />
@@ -317,6 +314,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WebService\WebServiceConsultorio.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

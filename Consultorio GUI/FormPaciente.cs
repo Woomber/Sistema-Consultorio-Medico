@@ -13,7 +13,7 @@ namespace Consultorio_GUI
 {
     public partial class FormPaciente : Form
     {
-        WebServiceSoapClient client;
+        WebService1SoapClient client;
 
         public int CuentaActual { get; set; }
 
@@ -21,7 +21,7 @@ namespace Consultorio_GUI
         {
             InitializeComponent();
 
-            client = new WebServiceSoapClient();
+            client = new WebService1SoapClient();
 
             CuentaActual = actual;
 

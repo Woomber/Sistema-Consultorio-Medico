@@ -13,7 +13,7 @@ namespace Consultorio_GUI
 {
     public partial class FormLogin : Form
     {
-        WebServiceSoapClient client;
+        WebService1SoapClient client;
 
         public int TipoCuenta { get; set; }
         public int CuentaActual { get; set; }
@@ -22,21 +22,23 @@ namespace Consultorio_GUI
         {
             InitializeComponent();
 
-            client = new WebServiceSoapClient();
+            client = new WebService1SoapClient();
 
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //Checar usuario y contraseña
-
+            Cuenta actual = client.readCuenta(txtUsername.Text, txtPassword.Text);
+            if (actual == null) MessageBox.Show("Login inválido");
+            
             //Cambiar por la lectura del tipo de usuario
-            TipoCuenta = 1;
+            //TipoCuenta = 1;
 
             //Cambiar por la lectura del id de cuenta actual
-            CuentaActual = 1;
+            //CuentaActual = 1;
 
-            switch (TipoCuenta)
+            switch (actual.ID_TipoCuenta)
             {
                 // MEDICO
                 case 1:
