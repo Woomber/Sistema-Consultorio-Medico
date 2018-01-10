@@ -2706,10 +2706,10 @@
   </wsdl:binding>
   <wsdl:service name="WebService1">
     <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
-      <soap:address location="http://consultorio.gear.host/WebServiceConsultorio.asmx" />
+      <soap:address location="http://localhost:3361/WebServiceConsultorio.asmx" />
     </wsdl:port>
     <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
-      <soap12:address location="http://consultorio.gear.host/WebServiceConsultorio.asmx" />
+      <soap12:address location="http://localhost:3361/WebServiceConsultorio.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

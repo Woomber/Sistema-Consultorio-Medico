@@ -411,6 +411,7 @@
             this.cbRecetas_Receta.Name = "cbRecetas_Receta";
             this.cbRecetas_Receta.Size = new System.Drawing.Size(251, 21);
             this.cbRecetas_Receta.TabIndex = 0;
+            this.cbRecetas_Receta.SelectedIndexChanged += new System.EventHandler(this.cbRecetas_Receta_SelectedIndexChanged);
             // 
             // FormPaciente
             // 

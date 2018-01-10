@@ -29,47 +29,58 @@ namespace Consultorio_GUI
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //Checar usuario y contraseña
-            Cuenta actual = client.readCuenta(txtUsername.Text, txtPassword.Text);
 
-            if (actual == null)
+            try
             {
-                MessageBox.Show("Login inválido");
-                return;
-            }
-
-            //Cambiar por la lectura del tipo de usuario
-            //TipoCuenta = 1;
-
-            //Cambiar por la lectura del id de cuenta actual
-            CuentaActual = actual.ID;
-
-            switch (actual.ID_TipoCuenta)
-            {
-                // MEDICO
-                case 1:
-                    FormMedico formMedico = new FormMedico(CuentaActual);
-                    formMedico.Show();
-                    formMedico.FormClosed += (s, args) => this.Close();
-                    break;
-
-                // SECRETARIO
-                case 2:
-                    FormSecretario formSecretario = new FormSecretario(CuentaActual);
-                    formSecretario.Show();
-                    formSecretario.FormClosed += (s, args) => this.Close();
-                    break;
-
-                // PACIENTE
-                case 3:
-                    FormPaciente formPaciente = new FormPaciente(CuentaActual);
-                    formPaciente.Show();
-                    formPaciente.FormClosed += (s, args) => this.Close();
-                    break;
-                default:
-                    MessageBox.Show("Usuario Incorrecto");
+                Cuenta actual = client.readCuenta(txtUsername.Text, txtPassword.Text);
+                if (actual == null)
+                {
+                    MessageBox.Show("Login inválido");
                     return;
+                }
+
+                //Cambiar por la lectura del tipo de usuario
+                //TipoCuenta = 1;
+
+                //Cambiar por la lectura del id de cuenta actual
+                CuentaActual = actual.ID;
+
+                switch (actual.ID_TipoCuenta)
+                {
+                    // MEDICO
+                    case 1:
+                        FormMedico formMedico = new FormMedico(CuentaActual);
+                        formMedico.Show();
+                        formMedico.FormClosed += (s, args) => this.Close();
+                        break;
+
+                    // SECRETARIO
+                    case 2:
+                        FormSecretario formSecretario = new FormSecretario(CuentaActual);
+                        formSecretario.Show();
+                        formSecretario.FormClosed += (s, args) => this.Close();
+                        break;
+
+                    // PACIENTE
+                    case 3:
+                        FormPaciente formPaciente = new FormPaciente(CuentaActual);
+                        formPaciente.Show();
+                        formPaciente.FormClosed += (s, args) => this.Close();
+                        break;
+                    default:
+                        MessageBox.Show("Usuario Incorrecto");
+                        return;
+                }
+                this.Hide();
             }
-            this.Hide();
+            catch (TimeoutException)
+            {
+
+                MessageBox.Show("Tiempo de conexión excedido");
+            }
+           
+
+           
 
         }
     }

@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://consultorio.gear.host/" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:3361/WebServiceConsultorio.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WebServiceConsultorio.wsdl" MetadataType="Wsdl" ID="360b0855-20be-4e2d-b698-fd8f21f12f2f" SourceId="1" SourceUrl="http://consultorio.gear.host/WebServiceConsultorio.asmx?wsdl" />
-    <MetadataFile FileName="WebServiceConsultorio.disco" MetadataType="Disco" ID="f64059c4-8366-4f2f-a7fd-c9497b49a9f3" SourceId="1" SourceUrl="http://consultorio.gear.host/WebServiceConsultorio.asmx?disco" />
+    <MetadataFile FileName="WebServiceConsultorio1.disco" MetadataType="Disco" ID="0e7bd821-45a0-477e-897f-d974dc5a52f1" SourceId="1" SourceUrl="http://localhost:3361/WebServiceConsultorio.asmx?disco" />
+    <MetadataFile FileName="WebServiceConsultorio1.wsdl" MetadataType="Wsdl" ID="bcf3f1e8-6298-45e9-b07e-355fd5a72ef5" SourceId="1" SourceUrl="http://localhost:3361/WebServiceConsultorio.asmx?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

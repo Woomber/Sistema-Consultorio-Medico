@@ -65,15 +65,23 @@ namespace Consultorio_GUI
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            if(Interrogatorios.Count() != 0)
+            try
             {
-                client.updateInterrogatorio(Interrogatorios[0].ID, cbAlimentacion.SelectedIndex.ToString(), checkDeporte.Checked, checkDrogas.Checked, checkToma.Checked,
-                    checkFuma.Checked, CheckMental.Checked, checkCorazon.Checked, checkCancer.Checked, checkDiabetes.Checked, checkCerVas.Checked, PacienteActual);
+                if (Interrogatorios.Count() != 0)
+                {
+                    client.updateInterrogatorio(Interrogatorios[0].ID, cbAlimentacion.Text, checkDeporte.Checked, checkDrogas.Checked, checkToma.Checked,
+                        checkFuma.Checked, CheckMental.Checked, checkCorazon.Checked, checkCancer.Checked, checkDiabetes.Checked, checkCerVas.Checked, PacienteActual);
+                }
+                else
+                {
+                    client.createInterrogatorio(cbAlimentacion.Text, checkDeporte.Checked, checkDrogas.Checked, checkToma.Checked,
+                        checkFuma.Checked, CheckMental.Checked, checkCorazon.Checked, checkCancer.Checked, checkDiabetes.Checked, checkCerVas.Checked, PacienteActual);
+                }
+                this.Close();
             }
-            else
+            catch (Exception)
             {
-                client.createInterrogatorio(cbAlimentacion.SelectedItem.ToString(), checkDeporte.Checked, checkDrogas.Checked, checkToma.Checked,
-                    checkFuma.Checked, CheckMental.Checked, checkCorazon.Checked, checkCancer.Checked, checkDiabetes.Checked, checkCerVas.Checked, PacienteActual);
+                MessageBox.Show("Error");
             }
             /*
              * Si ya hay interrogatorio, actualizar

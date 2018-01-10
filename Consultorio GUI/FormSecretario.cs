@@ -387,15 +387,15 @@ namespace Consultorio_GUI
                 Paciente paciente = cbNuevaCita_Paciente.SelectedItem as Paciente;
                 Horario horario = listNuevaCita_Hora.SelectedItem as Horario;
 
-                client.createCita(
-                    calendarNuevaCita.SelectionStart,
+                if (client.createCita(
+                    calendarNuevaCita.SelectionStart.Date,
                     txtNuevaCita_Motivo.Text,
-                    true,
+                    false,
                     paciente.ID,
                     medico.ID,
                     horario.ID
-                    );
-                MessageBox.Show("Cita agendada.");
+                    ) != -1)
+                    MessageBox.Show("Cita agendada.");
                 
                 actualizarCitas();
             }

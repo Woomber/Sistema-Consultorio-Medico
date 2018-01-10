@@ -33,7 +33,7 @@ namespace Consultorio_GUI
 
             CuentaActual = actual;
 
-            actualizarDatos();
+           
 
             uno = client.readPaciente().Where(y => y.ID_Cuenta == CuentaActual).ToList(); 
 
@@ -43,6 +43,8 @@ namespace Consultorio_GUI
 
             horarios = client.readHorario().ToList();
             listNuevaCita_Hora.DisplayMember = "hora";
+
+            actualizarDatos();
         }
 
         void actualizarDatos()
@@ -54,15 +56,19 @@ namespace Consultorio_GUI
             txtInfoPaciente_Sexo.Text = uno[0].sexo;
             txtInfoPaciente_Fecha.Text = Convert.ToString(uno[0].fechaNacimiento);
 
-            List<Cita> dos = client.readCita().ToList();
-            var d = from u in dos
-                    where u.ID_Paciente == uno[0].ID
-                    select u;
-            
-            dgvVerCita.DataSource = d.ToList();
+
+            List<Cita> citas = client.readCita().Where(x => x.ID_Paciente == uno[0].ID).ToList();
+            List<Paciente> pacientes = client.readPaciente().ToList();
+            List<Horario> horarios = client.readHorario().ToList();
+            var filtroCitas = from x in citas
+                              join y in pacientes on x.ID_Paciente equals y.ID
+                              join z in horarios on x.ID_Horario equals z.ID
+                              select new { Paciente = y.nombre + " " + y.apellidoPaterno, Fecha = x.fecha, Hora = z.hora + ":00-" + (z.hora + 1) + ":00", Descripcion = x.descripcion };
+            dgvVerCita.DataSource = filtroCitas.ToList();
 
             //Actualizar aquí todo lo automático
             //Mostrar información del paciente
+            actualizaReceta();
         }
 
         private void btnInfoPaciente_Guardar_Click(object sender, EventArgs e)
@@ -98,20 +104,29 @@ namespace Consultorio_GUI
 
         private void btnNuevaCita_Agendar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string mo = txtNuevaCita_Motivo.Text;
+                Horario hor = listNuevaCita_Hora.SelectedItem as Horario;
+                DateTime fecha = calendarNuevaCita.SelectionStart;
 
-            string mo = txtNuevaCita_Motivo.Text;
-            Horario hor = listNuevaCita_Hora.SelectedItem as Horario;
-            DateTime fecha = calendarNuevaCita.SelectionStart;
-
-            dos = client.readCita().Where(y => y.ID_Paciente == uno[0].ID).ToList();
-            int res = client.createCita(fecha, mo, true, uno[0].ID, uno[0].ID_Medico, hor.ID);
+                dos = client.readCita().Where(y => y.ID_Paciente == uno[0].ID).ToList();
+                int res = client.createCita(fecha, mo, true, uno[0].ID, uno[0].ID_Medico, hor.ID);
+            }
+            catch (Exception) { }
+            
         }
 
-        private void cbRecetas_Receta_SelectedIndexChanged(object sender, EventArgs e)
+        void actualizaReceta()
         {
             Receta selec = cbRecetas_Receta.SelectedItem as Receta;
             medica = client.readMedicamentoReceta().Where(y => y.ID_Receta == selec.ID).ToList();
             dgvRecetas_Medicamentos.DataSource = medica;
+        }
+
+        private void cbRecetas_Receta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            actualizaReceta();
         }
 
         private void calendarNuevaCita_DateChanged(object sender, DateRangeEventArgs e)
