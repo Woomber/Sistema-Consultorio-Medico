@@ -1,0 +1,7 @@
+C:\Users\kevinalan\Documents\Consultorio\consultorioMedico\consultorioMedico\obj\Release\consultorioMedico.csprojResolveAssemblyReference.cache
+C:\Users\kevinalan\Documents\Consultorio\consultorioMedico\consultorioMedico\bin\consultorioMedico.dll
+C:\Users\kevinalan\Documents\Consultorio\consultorioMedico\consultorioMedico\bin\consultorioMedico.pdb
+C:\Users\kevinalan\Documents\Consultorio\consultorioMedico\consultorioMedico\bin\EntityFramework.dll
+C:\Users\kevinalan\Documents\Consultorio\consultorioMedico\consultorioMedico\bin\EntityFramework.xml
+C:\Users\kevinalan\Documents\Consultorio\consultorioMedico\consultorioMedico\obj\Release\consultorioMedico.dll
+C:\Users\kevinalan\Documents\Consultorio\consultorioMedico\consultorioMedico\obj\Release\consultorioMedico.pdb
